@@ -62,6 +62,12 @@
     <Compile Include="Admin_Form.Designer.cs">
       <DependentUpon>Admin_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Adres_rest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adres_rest.Designer.cs">
+      <DependentUpon>Adres_rest.cs</DependentUpon>
+    </Compile>
     <Compile Include="DB.cs" />
     <Compile Include="Sign_In.cs">
       <SubType>Form</SubType>
@@ -85,6 +91,9 @@
     </Compile>
     <EmbeddedResource Include="Admin_Form.resx">
       <DependentUpon>Admin_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adres_rest.resx">
+      <DependentUpon>Adres_rest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sign_In.resx">
       <DependentUpon>Sign_In.cs</DependentUpon>
