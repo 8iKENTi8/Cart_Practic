@@ -32,14 +32,16 @@ namespace Cart_Practic
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(User_Form));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.resta1 = new Cart_Practic.resta();
+            this.dishes1 = new Cart_Practic.dishes();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -58,28 +60,6 @@ namespace Cart_Practic
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(223, 643);
             this.panel1.TabIndex = 3;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
-            this.panel3.Location = new System.Drawing.Point(12, 145);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 54);
-            this.panel3.TabIndex = 5;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(223, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(626, 29);
-            this.panel2.TabIndex = 4;
-            // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 25;
-            this.bunifuElipse2.TargetControl = this;
             // 
             // button4
             // 
@@ -145,6 +125,14 @@ namespace Cart_Practic
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.panel3.Location = new System.Drawing.Point(12, 145);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 54);
+            this.panel3.TabIndex = 5;
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
@@ -163,11 +151,41 @@ namespace Cart_Practic
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(223, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(748, 29);
+            this.panel2.TabIndex = 4;
+            // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 25;
+            this.bunifuElipse2.TargetControl = this;
+            // 
+            // resta1
+            // 
+            this.resta1.Location = new System.Drawing.Point(229, 35);
+            this.resta1.Name = "resta1";
+            this.resta1.Size = new System.Drawing.Size(730, 596);
+            this.resta1.TabIndex = 6;
+            // 
+            // dishes1
+            // 
+            this.dishes1.Location = new System.Drawing.Point(223, 35);
+            this.dishes1.Name = "dishes1";
+            this.dishes1.Size = new System.Drawing.Size(736, 605);
+            this.dishes1.TabIndex = 5;
+            // 
             // User_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(849, 643);
+            this.ClientSize = new System.Drawing.Size(971, 643);
+            this.Controls.Add(this.resta1);
+            this.Controls.Add(this.dishes1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -190,5 +208,7 @@ namespace Cart_Practic
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private System.Windows.Forms.Button button4;
+        private dishes dishes1;
+        private resta resta1;
     }
 }

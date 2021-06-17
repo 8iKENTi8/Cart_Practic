@@ -126,7 +126,7 @@ namespace Cart_Practic
                 return;
             }
 
-            if (email.Length < 5 && !email.Contains("@") && !email.Contains("."))
+            if (email.Length < 5 || !email.Contains("@") || !email.Contains("."))
             {
                 MessageBox.Show("Некоректный email");
                 return;

@@ -75,17 +75,14 @@ namespace Cart_Practic
                             int rowIndex = e.RowIndex;
 
                             DB db = new DB();
-                            MySqlCommand command = new MySqlCommand("UPDATE `categories` SET `id` = @ul, " +
-                                "`login` = @lg, `pass` = @ps, " +
-                                "`email` = @em WHERE `users`.`id` = @ul", db.getConnection());
+                            MySqlCommand command = new MySqlCommand("UPDATE `categories` SET " +
+                                "`name` = @lg WHERE `categories`.`category_id` = @ul", db.getConnection());
 
                             command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
                             command.Parameters.Add("@lg", MySqlDbType.VarChar).Value = table[1, rowIndex].Value.ToString();
-                            command.Parameters.Add("@ps", MySqlDbType.VarChar).Value = table[2, rowIndex].Value.ToString();
-                            command.Parameters.Add("@em", MySqlDbType.VarChar).Value = table[3, rowIndex].Value.ToString();
 
                             db.openConnection();
-                            if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Аккаунт был Обновлен"); }
+                            if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Запись была обновлена"); }
 
                             db.closeConnection();
                         }
@@ -162,6 +159,7 @@ namespace Cart_Practic
             ReloadDB();
         }
 
+        //Добавление записи
         private void table_UserAddedRow(object sender, DataGridViewRowEventArgs e)
         {
             try
@@ -205,6 +203,7 @@ namespace Cart_Practic
             ReloadDB();
         }
 
+        //Поиск
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13)

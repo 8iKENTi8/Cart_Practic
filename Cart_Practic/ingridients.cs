@@ -39,12 +39,14 @@ namespace Cart_Practic
             adapter.Fill(tab);
 
             table.DataSource = tab;
+            //label2.Text = tab.Rows[0]["name"].ToString();
 
             for (int i = 0; i < table.Rows.Count; i++)
             {
                 DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
 
                 table[2, i] = linkCell;
+                
                 table[2, i].Style.BackColor = Color.FromArgb(46, 169, 79);
             }
 

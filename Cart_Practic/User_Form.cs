@@ -23,6 +23,8 @@ namespace Cart_Practic
         {
             panel3.Height = button2.Height;
             panel3.Top = button2.Top;
+            resta1.BringToFront();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -36,6 +38,7 @@ namespace Cart_Practic
         {
             panel3.Height = button1.Height;
             panel3.Top = button1.Top;
+            dishes1.BringToFront();
         }
 
         private void button4_Click(object sender, EventArgs e)

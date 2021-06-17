@@ -39,6 +39,16 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\..\..\..\Desktop\toooo\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.0.25.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.25\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
@@ -56,6 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_adres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_adres.Designer.cs">
+      <DependentUpon>Add_adres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,11 +91,23 @@
       <DependentUpon>Category.cs</DependentUpon>
     </Compile>
     <Compile Include="DB.cs" />
+    <Compile Include="dishes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dishes.Designer.cs">
+      <DependentUpon>dishes.cs</DependentUpon>
+    </Compile>
     <Compile Include="ingridients.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ingridients.Designer.cs">
       <DependentUpon>ingridients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="resta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="resta.Designer.cs">
+      <DependentUpon>resta.cs</DependentUpon>
     </Compile>
     <Compile Include="Sign_In.cs">
       <SubType>Form</SubType>
@@ -95,12 +123,21 @@
     <Compile Include="Sign_Up.Designer.cs">
       <DependentUpon>Sign_Up.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="User_Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="User_Form.Designer.cs">
       <DependentUpon>User_Form.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Add_adres.resx">
+      <DependentUpon>Add_adres.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin_Form.resx">
       <DependentUpon>Admin_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,8 +147,14 @@
     <EmbeddedResource Include="Category.resx">
       <DependentUpon>Category.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="dishes.resx">
+      <DependentUpon>dishes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ingridients.resx">
       <DependentUpon>ingridients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resta.resx">
+      <DependentUpon>resta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sign_In.resx">
       <DependentUpon>Sign_In.cs</DependentUpon>
@@ -129,9 +172,13 @@
     <EmbeddedResource Include="Sign_Up.resx">
       <DependentUpon>Sign_Up.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User_Form.resx">
       <DependentUpon>User_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -156,6 +203,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="iconfinder_3521351_beach_island_summer_vacation_icon.ico" />
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\s1200.jpg" />
     <None Include="Resources\iconfinder_211817_search_strong_icon_32px.png" />
     <None Include="Resources\iconfinder_3430602_avatar_female_pretty_profile_user_icon_32px.png" />
     <None Include="Resources\iconfinder_7123010_home_google_icon_32px.png" />
