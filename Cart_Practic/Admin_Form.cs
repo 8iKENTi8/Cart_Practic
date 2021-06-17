@@ -35,5 +35,20 @@ namespace Cart_Practic
             Adres_rest form = new Adres_rest();
             form.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ingridients form = new ingridients();
+            form.Show();
+        }
+
+        // Категории
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Category form = new Category();
+            form.Show();
+        }
     }
 }

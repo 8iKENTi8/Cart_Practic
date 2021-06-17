@@ -63,6 +63,16 @@ namespace Cart_Practic.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_211817_search_strong_icon_32px {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_211817_search_strong_icon_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_216437_back_arrow_icon_32px {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_216437_back_arrow_icon_32px", resourceCulture);

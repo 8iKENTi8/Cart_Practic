@@ -68,7 +68,19 @@
     <Compile Include="Adres_rest.Designer.cs">
       <DependentUpon>Adres_rest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category.Designer.cs">
+      <DependentUpon>Category.cs</DependentUpon>
+    </Compile>
     <Compile Include="DB.cs" />
+    <Compile Include="ingridients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ingridients.Designer.cs">
+      <DependentUpon>ingridients.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sign_In.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +106,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Adres_rest.resx">
       <DependentUpon>Adres_rest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category.resx">
+      <DependentUpon>Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ingridients.resx">
+      <DependentUpon>ingridients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sign_In.resx">
       <DependentUpon>Sign_In.cs</DependentUpon>
@@ -138,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="iconfinder_3521351_beach_island_summer_vacation_icon.ico" />
+    <None Include="Resources\iconfinder_211817_search_strong_icon_32px.png" />
     <None Include="Resources\iconfinder_3430602_avatar_female_pretty_profile_user_icon_32px.png" />
     <None Include="Resources\iconfinder_7123010_home_google_icon_32px.png" />
     <None Include="Resources\iconfinder_3279060_back_previous_before_first_previously_icon_32px1.png" />

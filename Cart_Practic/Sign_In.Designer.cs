@@ -41,9 +41,9 @@ namespace Cart_Practic
             this.label2 = new System.Windows.Forms.Label();
             this.panelLeft = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelRight.SuspendLayout();
             this.panelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -119,9 +119,9 @@ namespace Cart_Practic
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
             this.label4.Location = new System.Drawing.Point(17, 182);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 21);
+            this.label4.Size = new System.Drawing.Size(74, 21);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Password:";
+            this.label4.Text = "Пароль:";
             // 
             // bunifuMaterialTextbox1
             // 
@@ -149,9 +149,9 @@ namespace Cart_Practic
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
             this.label3.Location = new System.Drawing.Point(17, 111);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 21);
+            this.label3.Size = new System.Drawing.Size(61, 21);
             this.label3.TabIndex = 0;
-            this.label3.Text = "User Name:";
+            this.label3.Text = "Логин:";
             // 
             // label8
             // 
@@ -198,6 +198,16 @@ namespace Cart_Practic
             this.label1.TabIndex = 1;
             this.label1.Text = "We Create, We Design\r\n       We Develop";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Cart_Practic.Properties.Resources.iconfinder_3521351_beach_island_summer_vacation_icon_512px;
+            this.pictureBox1.Location = new System.Drawing.Point(66, 103);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(190, 196);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 25;
@@ -209,16 +219,6 @@ namespace Cart_Practic
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.panelLeft;
             this.bunifuDragControl1.Vertical = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Cart_Practic.Properties.Resources.iconfinder_3521351_beach_island_summer_vacation_icon_512px;
-            this.pictureBox1.Location = new System.Drawing.Point(66, 103);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(190, 196);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // Sign_In
             // 

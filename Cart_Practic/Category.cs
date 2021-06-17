@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Cart_Practic
 {
-    public partial class Adres_rest : Form
+    public partial class Category : Form
     {
-        public Adres_rest()
+        public Category()
         {
             InitializeComponent();
         }
@@ -32,7 +32,7 @@ namespace Cart_Practic
 
             MySqlCommand command =
                 new MySqlCommand("SELECT *, 'Update','Delete'" +
-                "FROM `restaurant_addresses`", dB.getConnection());
+                "FROM `categories`", dB.getConnection());
 
             adapter.SelectCommand = command;
 
@@ -56,7 +56,7 @@ namespace Cart_Practic
                 table[3, i].Style.BackColor = Color.Tomato;
             }
 
-            
+
         }
 
         private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -75,7 +75,7 @@ namespace Cart_Practic
                             int rowIndex = e.RowIndex;
 
                             DB db = new DB();
-                            MySqlCommand command = new MySqlCommand("UPDATE `restaurant_addresses` SET `id` = @ul, " +
+                            MySqlCommand command = new MySqlCommand("UPDATE `categories` SET `id` = @ul, " +
                                 "`login` = @lg, `pass` = @ps, " +
                                 "`email` = @em WHERE `users`.`id` = @ul", db.getConnection());
 
@@ -113,8 +113,8 @@ namespace Cart_Practic
                             int rowIndex = e.RowIndex;
 
                             DB db = new DB();
-                            MySqlCommand command = new MySqlCommand("DELETE FROM `restaurant_addresses`" +
-                                " WHERE `users`.`id` = @ul ", db.getConnection());
+                            MySqlCommand command = new MySqlCommand("DELETE FROM `categories`" +
+                                " WHERE `categories`.`category_id` = @ul ", db.getConnection());
                             command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
 
                             table.Rows.RemoveAt(rowIndex);
@@ -127,12 +127,12 @@ namespace Cart_Practic
                     }
                     else if (task == "Insert")
                     {
-                        int rowIndex = table.Rows.Count -2;
-                        MessageBox.Show("ok");
+                        int rowIndex = table.Rows.Count - 2;
+                       
 
                         DB db = new DB();
-                        MySqlCommand command = new MySqlCommand("INSERT INTO `restaurant_addresses`" +
-                            "(`restaurant_id`, `place`) VALUES (@ul, @ul1)", db.getConnection());
+                        MySqlCommand command = new MySqlCommand("INSERT INTO `categories`" +
+                            "(`category_id`, `name`) VALUES (@ul, @ul1)", db.getConnection());
                         command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
                         command.Parameters.Add("@ul1", MySqlDbType.VarChar).Value = table[1, rowIndex].Value.ToString();
 
@@ -141,7 +141,7 @@ namespace Cart_Practic
                         table.Rows[e.RowIndex].Cells[3].Value = "Delete";
 
                         db.openConnection();
-                        if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Ресторан был добавлен"); }
+                        if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Категория была добавлена"); }
 
                         db.closeConnection();
                         ReloadDB();
@@ -157,13 +157,7 @@ namespace Cart_Practic
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            ReloadDB();
-            
-        }
-
-        private void Adres_rest_Load(object sender, EventArgs e)
+        private void Category_Load(object sender, EventArgs e)
         {
             ReloadDB();
         }
@@ -172,11 +166,11 @@ namespace Cart_Practic
         {
             try
             {
-                if(newRowAdd == false)
+                if (newRowAdd == false)
                 {
                     newRowAdd = true;
 
-                    int lastRow = tab.Rows.Count ;
+                    int lastRow = tab.Rows.Count;
 
                     DataGridViewRow row = table.Rows[lastRow];
 
@@ -194,6 +188,11 @@ namespace Cart_Practic
             }
         }
 
+        private void label8_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -201,12 +200,11 @@ namespace Cart_Practic
             form.Show();
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            ReloadDB();
         }
 
-        // Поиск
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13)
@@ -219,16 +217,16 @@ namespace Cart_Practic
                 {
                     DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
 
-                    table[1, i] = linkCell;
-                    table[1, i].Style.BackColor = Color.FromArgb(46, 169, 79);
+                    table[2, i] = linkCell;
+                    table[2, i].Style.BackColor = Color.FromArgb(46, 169, 79);
                 }
 
                 for (int i = 0; i < table.Rows.Count; i++)
                 {
                     DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
 
-                    table[2, i] = linkCell;
-                    table[2, i].Style.BackColor = Color.Tomato;
+                    table[3, i] = linkCell;
+                    table[3, i].Style.BackColor = Color.Tomato;
                 }
             }
 
@@ -238,20 +236,18 @@ namespace Cart_Practic
                 {
                     DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
 
-                    table[1, i] = linkCell;
-                    table[1, i].Style.BackColor = Color.FromArgb(46, 169, 79);
+                    table[2, i] = linkCell;
+                    table[2, i].Style.BackColor = Color.FromArgb(46, 169, 79);
                 }
 
                 for (int i = 0; i < table.Rows.Count; i++)
                 {
                     DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
 
-                    table[2, i] = linkCell;
-                    table[2, i].Style.BackColor = Color.Tomato;
+                    table[3, i] = linkCell;
+                    table[3, i].Style.BackColor = Color.Tomato;
                 }
             }
         }
-
-   
     }
 }
