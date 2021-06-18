@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Cart_Practic.формы_админы;
 
 namespace Cart_Practic
 {
@@ -48,6 +49,20 @@ namespace Cart_Practic
         {
             this.Hide();
             Category form = new Category();
+            form.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            users form = new users();
+            form.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            restorantss form = new restorantss();
             form.Show();
         }
     }

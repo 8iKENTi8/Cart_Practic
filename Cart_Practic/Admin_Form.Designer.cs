@@ -147,6 +147,7 @@ namespace Cart_Practic
             this.button2.Text = "  Рестораны";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -181,6 +182,7 @@ namespace Cart_Practic
             this.button3.Text = " Пользователи";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Admin_Form
             // 

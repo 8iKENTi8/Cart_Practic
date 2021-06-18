@@ -66,11 +66,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add_adres.cs">
+    <Compile Include="формы админа\restorantss.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add_adres.Designer.cs">
+    <Compile Include="формы админа\restorantss.Designer.cs">
+      <DependentUpon>restorantss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="формы админа\Add_adres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="формы админа\Add_adres.Designer.cs">
       <DependentUpon>Add_adres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="формы админа\add_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="формы админа\add_user.Designer.cs">
+      <DependentUpon>add_user.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin_Form.cs">
       <SubType>Form</SubType>
@@ -78,16 +90,16 @@
     <Compile Include="Admin_Form.Designer.cs">
       <DependentUpon>Admin_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Adres_rest.cs">
+    <Compile Include="формы админа\Adres_rest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Adres_rest.Designer.cs">
+    <Compile Include="формы админа\Adres_rest.Designer.cs">
       <DependentUpon>Adres_rest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Category.cs">
+    <Compile Include="формы админа\Category.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Category.Designer.cs">
+    <Compile Include="формы админа\Category.Designer.cs">
       <DependentUpon>Category.cs</DependentUpon>
     </Compile>
     <Compile Include="DB.cs" />
@@ -97,10 +109,10 @@
     <Compile Include="dishes.Designer.cs">
       <DependentUpon>dishes.cs</DependentUpon>
     </Compile>
-    <Compile Include="ingridients.cs">
+    <Compile Include="формы админа\ingridients.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ingridients.Designer.cs">
+    <Compile Include="формы админа\ingridients.Designer.cs">
       <DependentUpon>ingridients.cs</DependentUpon>
     </Compile>
     <Compile Include="resta.cs">
@@ -135,22 +147,34 @@
     <Compile Include="User_Form.Designer.cs">
       <DependentUpon>User_Form.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Add_adres.resx">
+    <Compile Include="формы админа\users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="формы админа\users.Designer.cs">
+      <DependentUpon>users.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="формы админа\restorantss.resx">
+      <DependentUpon>restorantss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="формы админа\Add_adres.resx">
       <DependentUpon>Add_adres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="формы админа\add_user.resx">
+      <DependentUpon>add_user.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Form.resx">
       <DependentUpon>Admin_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Adres_rest.resx">
+    <EmbeddedResource Include="формы админа\Adres_rest.resx">
       <DependentUpon>Adres_rest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Category.resx">
+    <EmbeddedResource Include="формы админа\Category.resx">
       <DependentUpon>Category.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dishes.resx">
       <DependentUpon>dishes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ingridients.resx">
+    <EmbeddedResource Include="формы админа\ingridients.resx">
       <DependentUpon>ingridients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="resta.resx">
@@ -177,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User_Form.resx">
       <DependentUpon>User_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="формы админа\users.resx">
+      <DependentUpon>users.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -213,5 +240,6 @@
     <None Include="Resources\iconfinder_3279060_back_previous_before_first_previously_icon_32px.png" />
     <None Include="Resources\iconfinder_216437_back_arrow_icon_32px.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
