@@ -34,10 +34,10 @@ namespace Cart_Practic
             this.button2 = new System.Windows.Forms.Button();
             this.table = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.up_dish1 = new Cart_Practic.up_dish();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.up_dish1 = new Cart_Practic.up_dish();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,6 +55,7 @@ namespace Cart_Practic
             this.button3.TabIndex = 5;
             this.button3.Text = "Домой";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -68,6 +69,7 @@ namespace Cart_Practic
             this.button2.TabIndex = 4;
             this.button2.Text = "Обновить";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // table
             // 
@@ -103,6 +105,13 @@ namespace Cart_Practic
             this.panel2.Size = new System.Drawing.Size(926, 423);
             this.panel2.TabIndex = 9;
             // 
+            // up_dish1
+            // 
+            this.up_dish1.Location = new System.Drawing.Point(0, -5);
+            this.up_dish1.Name = "up_dish1";
+            this.up_dish1.Size = new System.Drawing.Size(926, 435);
+            this.up_dish1.TabIndex = 6;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Cart_Practic.Properties.Resources.iconfinder_211817_search_strong_icon_32px;
@@ -133,13 +142,6 @@ namespace Cart_Practic
             this.button1.Text = "Назад";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // up_dish1
-            // 
-            this.up_dish1.Location = new System.Drawing.Point(0, 0);
-            this.up_dish1.Name = "up_dish1";
-            this.up_dish1.Size = new System.Drawing.Size(926, 435);
-            this.up_dish1.TabIndex = 6;
             // 
             // US_dish1
             // 

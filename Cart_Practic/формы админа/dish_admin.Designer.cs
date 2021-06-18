@@ -66,6 +66,7 @@ namespace Cart_Practic
             this.uS_dish11.Name = "uS_dish11";
             this.uS_dish11.Size = new System.Drawing.Size(877, 473);
             this.uS_dish11.TabIndex = 11;
+            this.uS_dish11.Load += new System.EventHandler(this.uS_dish11_Load);
             // 
             // dish_admin
             // 

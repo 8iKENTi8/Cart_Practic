@@ -24,6 +24,9 @@ namespace Cart_Practic
             Application.Exit();
         }
 
-        
+        private void uS_dish11_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

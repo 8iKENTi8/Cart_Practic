@@ -18,6 +18,7 @@ namespace Cart_Practic
             InitializeComponent();
             ReloadDB();
             up_dish1.Hide();
+            button1.Visible = false;
         }
         DataTable tab;
 
@@ -71,6 +72,7 @@ namespace Cart_Practic
                     string task = table.Rows[e.RowIndex].Cells[3].Value.ToString();
                     if (task == "Update")
                     {
+                        button1.Visible = true;
                         up_dish1.Show();
                         up_dish1.BringToFront();
                         if (MessageBox.Show("Обновить эту строку",
@@ -142,6 +144,7 @@ namespace Cart_Practic
         private void US_dish1_Load(object sender, EventArgs e)
         {
             ReloadDB();
+            button1.Visible = false;
         }
 
         private void up_dish1_Load(object sender, EventArgs e)
@@ -152,6 +155,20 @@ namespace Cart_Practic
         private void button1_Click(object sender, EventArgs e)
         {
             up_dish1.Hide();
+            if (button1.Visible == true)
+                button1.Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Admin_Form form = new Admin_Form();
+            form.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ReloadDB();
         }
     }
 }

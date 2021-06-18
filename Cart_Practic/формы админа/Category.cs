@@ -177,6 +177,7 @@ namespace Cart_Practic
                     table[3, lastRow] = linkCell;
 
                     row.Cells["Delete"].Value = "Insert";
+                    table[3, lastRow].Style.BackColor = Color.Tomato;
                 }
             }
             catch (Exception ex)
