@@ -65,5 +65,12 @@ namespace Cart_Practic
             restorantss form = new restorantss();
             form.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            dish_admin form = new dish_admin();
+            form.Show();
+        }
     }
 }

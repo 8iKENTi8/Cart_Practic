@@ -66,6 +66,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="формы админа\dish_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="формы админа\dish_admin.Designer.cs">
+      <DependentUpon>dish_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="up_dish.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="up_dish.Designer.cs">
+      <DependentUpon>up_dish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US_dish1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="US_dish1.Designer.cs">
+      <DependentUpon>US_dish1.cs</DependentUpon>
+    </Compile>
     <Compile Include="формы админа\restorantss.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +171,15 @@
     <Compile Include="формы админа\users.Designer.cs">
       <DependentUpon>users.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="формы админа\dish_admin.resx">
+      <DependentUpon>dish_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="up_dish.resx">
+      <DependentUpon>up_dish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US_dish1.resx">
+      <DependentUpon>US_dish1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="формы админа\restorantss.resx">
       <DependentUpon>restorantss.cs</DependentUpon>
     </EmbeddedResource>
