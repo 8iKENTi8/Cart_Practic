@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class_up_dish.cs" />
     <Compile Include="формы админа\dish_admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -258,6 +259,7 @@
   <ItemGroup>
     <Content Include="iconfinder_3521351_beach_island_summer_vacation_icon.ico" />
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\iconfinder_216437_back_arrow_icon_32px %281%29.png" />
     <None Include="Resources\s1200.jpg" />
     <None Include="Resources\iconfinder_211817_search_strong_icon_32px.png" />
     <None Include="Resources\iconfinder_3430602_avatar_female_pretty_profile_user_icon_32px.png" />

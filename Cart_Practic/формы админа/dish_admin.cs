@@ -28,5 +28,17 @@ namespace Cart_Practic
         {
 
         }
+
+        private void uS_dish11_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Admin_Form form = new Admin_Form();
+            form.Show();
+        }
     }
 }

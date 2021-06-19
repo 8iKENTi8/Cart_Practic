@@ -18,10 +18,11 @@ namespace Cart_Practic
             InitializeComponent();
             ReloadDB();
             up_dish1.Hide();
-            button1.Visible = false;
+           
         }
         DataTable tab;
 
+       
         private void ReloadDB()
         {
 
@@ -32,11 +33,13 @@ namespace Cart_Practic
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
             MySqlCommand command =
-                new MySqlCommand("SELECT  `restaurant_addresses`.`restaurant_id` AS 'id',`restaurants`.`name` AS 'Название ресторана'," +
-                "`restaurant_addresses`.`place` AS 'Адрес', 'Update','Delete' " +
-                "FROM `restaurant_addresses`, `restaurants` " +
-                "WHERE `restaurant_addresses`.`restaurant_id`=" +
-                "`restaurants`.`restaurant_id`", dB.getConnection());
+                new MySqlCommand("SELECT `dishes`.`dish_id` AS 'id', `dishes`.`name` AS 'Название'," +
+                "`restaurants`.`name` AS 'Ресторан', `categories`.`name` AS 'Категория', " +
+                "`dishes`.`cost` as 'Цена',`dishes`.`structure` as 'Состав', " +
+                "`dishes`.`beg_time` as 'Время начала',`dishes`.`end_time` AS 'Конец подачи', " +
+                "`dishes`.`img` as 'Ссылка на изображение','Update','Delete' FROM `dishes`,`categories`," +
+                "`restaurants` WHERE `dishes`.`category_id`=`categories`.`category_id` " +
+                "AND `dishes`.`restaurant_id`=`restaurants`.`restaurant_id`", dB.getConnection());
 
             adapter.SelectCommand = command;
 
@@ -48,52 +51,39 @@ namespace Cart_Practic
             {
                 DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
 
-                table[3, i] = linkCell;
-                table[3, i].Style.BackColor = Color.FromArgb(46, 169, 79);
+                table[9, i] = linkCell;
+                table[9, i].Style.BackColor = Color.FromArgb(46, 169, 79);
             }
 
             for (int i = 0; i < table.Rows.Count; i++)
             {
                 DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
 
-                table[4, i] = linkCell;
-                table[4, i].Style.BackColor = Color.Tomato;
+                table[10, i] = linkCell;
+                table[10, i].Style.BackColor = Color.Tomato;
             }
 
 
         }
-
+        
         private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                if (e.ColumnIndex == 3)
+                if (e.ColumnIndex == 9)
                 {
-                    string task = table.Rows[e.RowIndex].Cells[3].Value.ToString();
+                    string task = table.Rows[e.RowIndex].Cells[9].Value.ToString();
                     if (task == "Update")
                     {
+                       
                         button1.Visible = true;
+                        Class_up_dish.id = table.Rows[e.RowIndex].Cells[0].Value.ToString();
+                        Class_up_dish.id_cat = table.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+                        up_dish1.load1();
                         up_dish1.Show();
                         up_dish1.BringToFront();
-                        if (MessageBox.Show("Обновить эту строку",
-                            "Обновление", MessageBoxButtons.YesNo,
-                            MessageBoxIcon.Question) == DialogResult.Yes)
-                        {
-                            int rowIndex = e.RowIndex;
-
-                            DB db = new DB();
-                            MySqlCommand command = new MySqlCommand("UPDATE `restaurant_addresses` SET `place` = " +
-                                "@lg WHERE `restaurant_addresses`.`restaurant_id`=@ul  ", db.getConnection());
-
-                            command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
-                            command.Parameters.Add("@lg", MySqlDbType.VarChar).Value = table[2, rowIndex].Value.ToString();
-
-
-                            db.openConnection();
-                            if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Аккаунт был Обновлен"); }
-
-                            db.closeConnection();
-                        }
+                       
                     }
                 }
             }
@@ -106,9 +96,9 @@ namespace Cart_Practic
 
             try
             {
-                if (e.ColumnIndex == 4)
+                if (e.ColumnIndex == 10)
                 {
-                    string task = table.Rows[e.RowIndex].Cells[4].Value.ToString();
+                    string task = table.Rows[e.RowIndex].Cells[10].Value.ToString();
                     if (task == "Delete")
                     {
                         if (MessageBox.Show("Удалить эту строку",
@@ -118,14 +108,14 @@ namespace Cart_Practic
                             int rowIndex = e.RowIndex;
 
                             DB db = new DB();
-                            MySqlCommand command = new MySqlCommand("DELETE FROM `restaurant_addresses`" +
-                                " WHERE `restaurant_addresses`.`restaurant_id` = @ul ", db.getConnection());
+                            MySqlCommand command = new MySqlCommand("DELETE FROM `dishes`" +
+                                " WHERE `dishes`.`dish_id` = @ul ", db.getConnection());
                             command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
 
                             table.Rows.RemoveAt(rowIndex);
 
                             db.openConnection();
-                            if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Аккаунт был Удален"); }
+                            if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Запись была удалена"); }
 
                             db.closeConnection();
                         }
@@ -152,23 +142,74 @@ namespace Cart_Practic
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            up_dish1.Hide();
-            if (button1.Visible == true)
-                button1.Visible = false;
-        }
+       
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
             Admin_Form form = new Admin_Form();
             form.Show();
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             ReloadDB();
+        }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                DataView data = tab.DefaultView;
+                data.RowFilter = string.Format("Название like '%{0}%'", txtSearch.Text);
+                table.DataSource = data.ToTable();
+
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
+
+                    table[9, i] = linkCell;
+                    table[9, i].Style.BackColor = Color.FromArgb(46, 169, 79);
+                }
+
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
+
+                    table[10, i] = linkCell;
+                    table[10, i].Style.BackColor = Color.Tomato;
+                }
+            }
+
+            if (txtSearch.Text == "")
+            {
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
+
+                    table[9, i] = linkCell;
+                    table[9, i].Style.BackColor = Color.FromArgb(46, 169, 79);
+                }
+
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
+
+                    table[10, i] = linkCell;
+                    table[10, i].Style.BackColor = Color.Tomato;
+                }
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            up_dish1.Visible=false;
+           
+            button1.Visible = false;
+
+
+
         }
     }
 }
