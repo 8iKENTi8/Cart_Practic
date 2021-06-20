@@ -67,6 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class_up_dish.cs" />
+    <Compile Include="формы пользователя\UScab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="формы пользователя\UScab.Designer.cs">
+      <DependentUpon>UScab.cs</DependentUpon>
+    </Compile>
     <Compile Include="формы админа\dish_admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     <Compile Include="формы админа\users.Designer.cs">
       <DependentUpon>users.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="формы пользователя\UScab.resx">
+      <DependentUpon>UScab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="формы админа\dish_admin.resx">
       <DependentUpon>dish_admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,6 +268,12 @@
   <ItemGroup>
     <Content Include="iconfinder_3521351_beach_island_summer_vacation_icon.ico" />
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\2b22c3f5c79f188acfd76e225c87275b.jpg" />
+    <None Include="Resources\8b3a53bea0f50cf59e5d27b4a81f6ede.jpg" />
+    <None Include="Resources\iconfinder_2561289_refresh_ccw_icon_32px1.png" />
+    <None Include="Resources\iconfinder_2561289_refresh_ccw_icon_32px.png" />
+    <None Include="Resources\iconfinder_4715010_avatar_boy_people_person_profile_icon_512px.png" />
+    <None Include="Resources\iconfinder_5027866_businessman_man_user_icon_512px.png" />
     <None Include="Resources\iconfinder_216437_back_arrow_icon_32px %281%29.png" />
     <None Include="Resources\s1200.jpg" />
     <None Include="Resources\iconfinder_211817_search_strong_icon_32px.png" />

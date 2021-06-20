@@ -40,6 +40,7 @@ namespace Cart_Practic
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.uScab1 = new Cart_Practic.UScab();
             this.resta1 = new Cart_Practic.resta();
             this.dishes1 = new Cart_Practic.dishes();
             this.panel1.SuspendLayout();
@@ -58,7 +59,7 @@ namespace Cart_Practic
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(223, 643);
+            this.panel1.Size = new System.Drawing.Size(223, 756);
             this.panel1.TabIndex = 3;
             // 
             // button4
@@ -82,7 +83,7 @@ namespace Cart_Practic
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Cart_Practic.Properties.Resources.iconfinder_3521351_beach_island_summer_vacation_icon_512px;
-            this.pictureBox1.Location = new System.Drawing.Point(39, 466);
+            this.pictureBox1.Location = new System.Drawing.Point(39, 588);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(144, 156);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -157,7 +158,7 @@ namespace Cart_Practic
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(223, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(748, 29);
+            this.panel2.Size = new System.Drawing.Size(1046, 29);
             this.panel2.TabIndex = 4;
             // 
             // bunifuElipse2
@@ -165,25 +166,35 @@ namespace Cart_Practic
             this.bunifuElipse2.ElipseRadius = 25;
             this.bunifuElipse2.TargetControl = this;
             // 
+            // uScab1
+            // 
+            this.uScab1.Location = new System.Drawing.Point(223, 27);
+            this.uScab1.Name = "uScab1";
+            this.uScab1.Size = new System.Drawing.Size(1043, 696);
+            this.uScab1.TabIndex = 7;
+            this.uScab1.Load += new System.EventHandler(this.uScab1_Load);
+            // 
             // resta1
             // 
-            this.resta1.Location = new System.Drawing.Point(229, 35);
+            this.resta1.Location = new System.Drawing.Point(223, 27);
             this.resta1.Name = "resta1";
-            this.resta1.Size = new System.Drawing.Size(730, 596);
+            this.resta1.Size = new System.Drawing.Size(843, 683);
             this.resta1.TabIndex = 6;
+            this.resta1.Load += new System.EventHandler(this.resta1_Load);
             // 
             // dishes1
             // 
-            this.dishes1.Location = new System.Drawing.Point(223, 35);
+            this.dishes1.Location = new System.Drawing.Point(223, 27);
             this.dishes1.Name = "dishes1";
-            this.dishes1.Size = new System.Drawing.Size(736, 605);
+            this.dishes1.Size = new System.Drawing.Size(1046, 683);
             this.dishes1.TabIndex = 5;
             // 
             // User_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(971, 643);
+            this.ClientSize = new System.Drawing.Size(1269, 756);
+            this.Controls.Add(this.uScab1);
             this.Controls.Add(this.resta1);
             this.Controls.Add(this.dishes1);
             this.Controls.Add(this.panel2);
@@ -210,5 +221,6 @@ namespace Cart_Practic
         private System.Windows.Forms.Button button4;
         private dishes dishes1;
         private resta resta1;
+        private UScab uScab1;
     }
 }

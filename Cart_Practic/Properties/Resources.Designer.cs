@@ -63,6 +63,26 @@ namespace Cart_Practic.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2b22c3f5c79f188acfd76e225c87275b {
+            get {
+                object obj = ResourceManager.GetObject("2b22c3f5c79f188acfd76e225c87275b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8b3a53bea0f50cf59e5d27b4a81f6ede {
+            get {
+                object obj = ResourceManager.GetObject("8b3a53bea0f50cf59e5d27b4a81f6ede", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_211817_search_strong_icon_32px {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_211817_search_strong_icon_32px", resourceCulture);
@@ -86,6 +106,26 @@ namespace Cart_Practic.Properties {
         internal static System.Drawing.Bitmap iconfinder_216437_back_arrow_icon_32px__1_ {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_216437_back_arrow_icon_32px (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_2561289_refresh_ccw_icon_32px {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_2561289_refresh_ccw_icon_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_2561289_refresh_ccw_icon_32px1 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_2561289_refresh_ccw_icon_32px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +176,26 @@ namespace Cart_Practic.Properties {
         internal static System.Drawing.Bitmap iconfinder_3521351_beach_island_summer_vacation_icon_512px1 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_3521351_beach_island_summer_vacation_icon_512px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_4715010_avatar_boy_people_person_profile_icon_512px {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_4715010_avatar_boy_people_person_profile_icon_512px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_5027866_businessman_man_user_icon_512px {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_5027866_businessman_man_user_icon_512px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -22,6 +22,9 @@ namespace Cart_Practic
         DataTable tab;
         DataTable tab1;
 
+        //Выгрузка селектов
+     
+
         //Выгрузка рестаранов и ингридиентов
         public void res_and_ingr()
         {
@@ -47,7 +50,7 @@ namespace Cart_Practic
             tab = new DataTable();
 
             command =
-                new MySqlCommand("SELECT `restaurants`.`restaurant_id` AS 'Id'," +
+                new MySqlCommand("SELECT `restaurant_addresses`.`id_adres` AS 'Id'," +
                 "`restaurants`.`name` AS 'Название',`restaurant_addresses`.`place` " +
                 "AS 'Адрес' FROM `restaurants`,`restaurant_addresses` " +
                 "WHERE `restaurant_addresses`.`restaurant_id`=" +
@@ -64,6 +67,7 @@ namespace Cart_Practic
        
         public void load1()
         {
+            
             comboBox1.Items.Clear();
             pictureBox1.Image = null;
             DB dB = new DB();
@@ -89,14 +93,15 @@ namespace Cart_Practic
             {
                 pictureBox1.Load(url);
             }
-                
 
 
+            Sostav.Text = tab.Rows[0][4].ToString();
             textBox1.Text= tab.Rows[0][5].ToString();
             textBox2.Text= tab.Rows[0][3].ToString();
             textBox5.Text= tab.Rows[0][8].ToString();
             maskedTextBox1.Text= tab.Rows[0][6].ToString();
             maskedTextBox2.Text = tab.Rows[0][7].ToString();
+            Class_up_dish.id_res= tab.Rows[0][2].ToString();
 
 
             comboBox1.Text = Class_up_dish.id_cat;
@@ -121,11 +126,40 @@ namespace Cart_Practic
 
             res_and_ingr();
 
+            
+
+           
+
         }
 
+        public void clearD()
+        {
+            dataGridView1.ClearSelection();
+            table.ClearSelection();
+            //SELECT `restaurants`.`restaurant_id`,`restaurant_addresses`.`id_adres` FROM `restaurants`,`restaurant_addresses` WHERE `restaurants`.`restaurant_id`= 3 AND `restaurants`.`restaurant_id`=`restaurant_addresses`.`restaurant_id`
+            DB dB = new DB();
+
+            tab = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            MySqlCommand command =
+                new MySqlCommand("SELECT `restaurants`.`restaurant_id`,`restaurant_addresses`.`id_adres`" +
+                " FROM `restaurants`,`restaurant_addresses` WHERE `restaurants`.`restaurant_id`=@ul" +
+                " AND `restaurants`.`restaurant_id`=`restaurant_addresses`.`restaurant_id`", dB.getConnection());
+            command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = Class_up_dish.id_res;
+
+            adapter.SelectCommand = command;
+
+            adapter.Fill(tab);
+
+
+            dataGridView1.Rows[Convert.ToInt32(tab.Rows[0][1])-1].Selected = true;
+        }
 
         private void up_dish_Load(object sender, EventArgs e)
         {
+           
            
         }
 
@@ -206,6 +240,22 @@ namespace Cart_Practic
 
 
             }
+        }
+
+        private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void add_ingr_Click(object sender, EventArgs e)
+        {
+            dataGridView1.ClearSelection();
+            
+        }
+
+        private void drop_ingr_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows[1].Selected = true;
         }
     }
 }

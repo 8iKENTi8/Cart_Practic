@@ -118,40 +118,58 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="iconfinder_211817_search_strong_icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_211817_search_strong_icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconfinder_3521351_beach_island_summer_vacation_icon_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_3521351_beach_island_summer_vacation_icon_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconfinder_7123010_home_google_icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_7123010_home_google_icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconfinder_3279060_back_previous_before_first_previously_icon_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_3279060_back_previous_before_first_previously_icon_32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconfinder_51770_back_icon_47px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_51770_back_icon_47px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="kisspng-computer-icons-malibu-jack-s-lexington-clip-art-5b09728a7948e8.6801144415273458024968" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kisspng-computer-icons-malibu-jack-s-lexington-clip-art-5b09728a7948e8.6801144415273458024968.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconfinder_216437_back_arrow_icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_216437_back_arrow_icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconfinder_3430602_avatar_female_pretty_profile_user_icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_3430602_avatar_female_pretty_profile_user_icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="s1200" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\s1200.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconfinder_211817_search_strong_icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_211817_search_strong_icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconfinder_5027866_businessman_man_user_icon_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_5027866_businessman_man_user_icon_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconfinder_3521351_beach_island_summer_vacation_icon_512px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_3521351_beach_island_summer_vacation_icon_512px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconfinder_51770_back_icon_47px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_51770_back_icon_47px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_216437_back_arrow_icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_216437_back_arrow_icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_2561289_refresh_ccw_icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_2561289_refresh_ccw_icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kisspng-computer-icons-malibu-jack-s-lexington-clip-art-5b09728a7948e8.6801144415273458024968" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-computer-icons-malibu-jack-s-lexington-clip-art-5b09728a7948e8.6801144415273458024968.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconfinder_3279060_back_previous_before_first_previously_icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_3279060_back_previous_before_first_previously_icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconfinder_216437_back_arrow_icon_32px (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_216437_back_arrow_icon_32px (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_3279060_back_previous_before_first_previously_icon_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_3279060_back_previous_before_first_previously_icon_32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_4715010_avatar_boy_people_person_profile_icon_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_4715010_avatar_boy_people_person_profile_icon_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_3430602_avatar_female_pretty_profile_user_icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_3430602_avatar_female_pretty_profile_user_icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_2561289_refresh_ccw_icon_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_2561289_refresh_ccw_icon_32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_3521351_beach_island_summer_vacation_icon_512px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_3521351_beach_island_summer_vacation_icon_512px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="8b3a53bea0f50cf59e5d27b4a81f6ede" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8b3a53bea0f50cf59e5d27b4a81f6ede.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_7123010_home_google_icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_7123010_home_google_icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2b22c3f5c79f188acfd76e225c87275b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2b22c3f5c79f188acfd76e225c87275b.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

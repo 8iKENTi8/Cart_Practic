@@ -16,5 +16,10 @@ namespace Cart_Practic
         {
             InitializeComponent();
         }
+
+        private void dishes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

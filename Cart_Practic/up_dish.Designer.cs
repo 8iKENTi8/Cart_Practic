@@ -29,8 +29,8 @@ namespace Cart_Practic
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,6 +53,9 @@ namespace Cart_Practic
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.Sostav = new System.Windows.Forms.TextBox();
+            this.add_ingr = new System.Windows.Forms.Button();
+            this.drop_ingr = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -187,8 +190,8 @@ namespace Cart_Practic
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -203,8 +206,8 @@ namespace Cart_Practic
             // 
             this.table.AllowUserToAddRows = false;
             this.table.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.table.BackgroundColor = System.Drawing.Color.White;
             this.table.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -214,6 +217,7 @@ namespace Cart_Practic
             this.table.RowHeadersVisible = false;
             this.table.Size = new System.Drawing.Size(261, 230);
             this.table.TabIndex = 28;
+            this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick);
             // 
             // comboBox1
             // 
@@ -279,10 +283,49 @@ namespace Cart_Practic
             this.label9.TabIndex = 44;
             this.label9.Text = "Ссылка";
             // 
+            // Sostav
+            // 
+            this.Sostav.Location = new System.Drawing.Point(639, 368);
+            this.Sostav.Multiline = true;
+            this.Sostav.Name = "Sostav";
+            this.Sostav.Size = new System.Drawing.Size(229, 43);
+            this.Sostav.TabIndex = 45;
+            // 
+            // add_ingr
+            // 
+            this.add_ingr.BackColor = System.Drawing.Color.DarkOrange;
+            this.add_ingr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.add_ingr.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.add_ingr.ForeColor = System.Drawing.Color.White;
+            this.add_ingr.Location = new System.Drawing.Point(639, 333);
+            this.add_ingr.Name = "add_ingr";
+            this.add_ingr.Size = new System.Drawing.Size(109, 29);
+            this.add_ingr.TabIndex = 46;
+            this.add_ingr.Text = "Добавить";
+            this.add_ingr.UseVisualStyleBackColor = false;
+            this.add_ingr.Click += new System.EventHandler(this.add_ingr_Click);
+            // 
+            // drop_ingr
+            // 
+            this.drop_ingr.BackColor = System.Drawing.Color.OrangeRed;
+            this.drop_ingr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.drop_ingr.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.drop_ingr.ForeColor = System.Drawing.Color.White;
+            this.drop_ingr.Location = new System.Drawing.Point(759, 333);
+            this.drop_ingr.Name = "drop_ingr";
+            this.drop_ingr.Size = new System.Drawing.Size(109, 29);
+            this.drop_ingr.TabIndex = 47;
+            this.drop_ingr.Text = "Удалить";
+            this.drop_ingr.UseVisualStyleBackColor = false;
+            this.drop_ingr.Click += new System.EventHandler(this.drop_ingr_Click);
+            // 
             // up_dish
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.drop_ingr);
+            this.Controls.Add(this.add_ingr);
+            this.Controls.Add(this.Sostav);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.button2);
@@ -340,5 +383,8 @@ namespace Cart_Practic
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox Sostav;
+        private System.Windows.Forms.Button add_ingr;
+        private System.Windows.Forms.Button drop_ingr;
     }
 }

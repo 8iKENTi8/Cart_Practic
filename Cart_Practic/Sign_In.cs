@@ -44,6 +44,9 @@ namespace Cart_Practic
 
             adapter.Fill(table);
 
+            Class_up_dish.id= table.Rows[0][1].ToString();
+            Class_up_dish.id_ingr = table.Rows[0][3].ToString();
+
             if (table.Rows.Count > 0)
                 return true;
 
@@ -58,6 +61,9 @@ namespace Cart_Practic
             adapter.SelectCommand = command;
 
             adapter.Fill(table);
+
+            Class_up_dish.id = table.Rows[0][1].ToString();
+            Class_up_dish.id_ingr = table.Rows[0][3].ToString();
 
             if (table.Rows.Count > 0)
             {

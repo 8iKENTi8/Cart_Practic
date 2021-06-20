@@ -31,7 +31,7 @@ namespace Cart_Practic
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
             MySqlCommand command =
-                new MySqlCommand("SELECT  `restaurant_addresses`.`restaurant_id` AS 'id',`restaurants`.`name` AS 'Название ресторана'," +
+                new MySqlCommand("SELECT  `restaurant_addresses`.`id_adres` AS 'id',`restaurants`.`name` AS 'Название ресторана'," +
                 "`restaurant_addresses`.`place` AS 'Адрес', 'Update','Delete' " +
                 "FROM `restaurant_addresses`, `restaurants` " +
                 "WHERE `restaurant_addresses`.`restaurant_id`=" +
@@ -79,7 +79,7 @@ namespace Cart_Practic
 
                             DB db = new DB();
                             MySqlCommand command = new MySqlCommand("UPDATE `restaurant_addresses` SET `place` = " +
-                                "@lg WHERE `restaurant_addresses`.`restaurant_id`=@ul  ", db.getConnection());
+                                "@lg WHERE `restaurant_addresses`.`id_adres`=@ul  ", db.getConnection());
 
                             command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
                             command.Parameters.Add("@lg", MySqlDbType.VarChar).Value = table[2, rowIndex].Value.ToString();
@@ -115,7 +115,7 @@ namespace Cart_Practic
 
                             DB db = new DB();
                             MySqlCommand command = new MySqlCommand("DELETE FROM `restaurant_addresses`" +
-                                " WHERE `restaurant_addresses`.`restaurant_id` = @ul ", db.getConnection());
+                                " WHERE `restaurant_addresses`.`id_adres` = @ul ", db.getConnection());
                             command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
 
                             table.Rows.RemoveAt(rowIndex);

@@ -83,6 +83,9 @@ namespace Cart_Practic
                         up_dish1.load1();
                         up_dish1.Show();
                         up_dish1.BringToFront();
+                        up_dish1.clearD();
+                       
+                        
                        
                     }
                 }
