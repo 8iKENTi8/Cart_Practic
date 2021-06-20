@@ -1,7 +1,7 @@
 ﻿
 namespace Cart_Practic
 {
-    partial class UserControl1
+    partial class Tab_rest
     {
         /// <summary> 
         /// Обязательная переменная конструктора.

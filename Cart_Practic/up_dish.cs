@@ -20,6 +20,46 @@ namespace Cart_Practic
         }
 
         DataTable tab;
+        DataTable tab1;
+
+        //Выгрузка рестаранов и ингридиентов
+        public void res_and_ingr()
+        {
+
+            DB dB = new DB();
+
+            
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            tab1 = new DataTable();
+            
+
+            MySqlCommand command =
+                new MySqlCommand("SELECT `ingredients`.`ingredient_id`,`ingredients`.`name` AS 'Название'  FROM `ingredients` ", dB.getConnection());
+
+
+            adapter.SelectCommand = command;
+
+            adapter.Fill(tab1);
+            table.DataSource = tab1;
+
+            tab = new DataTable();
+
+            command =
+                new MySqlCommand("SELECT `restaurants`.`restaurant_id` AS 'Id'," +
+                "`restaurants`.`name` AS 'Название',`restaurant_addresses`.`place` " +
+                "AS 'Адрес' FROM `restaurants`,`restaurant_addresses` " +
+                "WHERE `restaurant_addresses`.`restaurant_id`=" +
+                "`restaurants`.`restaurant_id` ", dB.getConnection());
+
+
+            adapter.SelectCommand = command;
+
+            adapter.Fill(tab);
+
+            dataGridView1.DataSource = tab;
+        }
 
        
         public void load1()
@@ -77,26 +117,16 @@ namespace Cart_Practic
                 comboBox1.Items.Add(tab.Rows[i][1].ToString());
             }
 
+            //Выгрузка рестаранов и ингридиентов
+
+            res_and_ingr();
+
         }
 
 
         private void up_dish_Load(object sender, EventArgs e)
         {
-            //DB dB = new DB();
-
-            //tab = new DataTable();
-
-            //MySqlDataAdapter adapter = new MySqlDataAdapter();
-
-            //MySqlCommand command =
-            //    new MySqlCommand("SELECT `ingredients`.`ingredient_id` AS 'id' " +
-            //    ", `ingredients`.`name` AS 'Название' FROM `ingredients`", dB.getConnection());
-
-            //adapter.SelectCommand = command;
-
-            //adapter.Fill(tab);
-
-            //table.DataSource = tab;
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -107,7 +137,7 @@ namespace Cart_Practic
 
             tab = new DataTable();
 
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+          
             try
             {
                 MySqlCommand command =
@@ -129,6 +159,53 @@ namespace Cart_Practic
            
 
            
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                DataView data = tab1.DefaultView;
+                data.RowFilter = string.Format("Название like '%{0}%'", textBox3.Text);
+                table.DataSource = data.ToTable();
+            }
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            DB dB = new DB();
+
+
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+          
+
+            tab = new DataTable();
+
+            MySqlCommand command =
+                new MySqlCommand("SELECT `restaurants`.`restaurant_id` AS 'Id'," +
+                "`restaurants`.`name` AS 'Название',`restaurant_addresses`.`place` " +
+                "AS 'Адрес' FROM `restaurants`,`restaurant_addresses` " +
+                "WHERE `restaurant_addresses`.`restaurant_id`=" +
+                "`restaurants`.`restaurant_id` ", dB.getConnection());
+
+
+            adapter.SelectCommand = command;
+
+            adapter.Fill(tab);
+
+           
+
+            if (e.KeyChar == (char)13)
+            {
+                DataView data = tab.DefaultView;
+                data.RowFilter = string.Format("Название like '%{0}%'", textBox4.Text);
+                dataGridView1.DataSource = data.ToTable();
+
+
+            }
         }
     }
 }

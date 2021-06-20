@@ -196,7 +196,7 @@ namespace Cart_Practic
             this.dataGridView1.Location = new System.Drawing.Point(9, 181);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(253, 217);
+            this.dataGridView1.Size = new System.Drawing.Size(253, 230);
             this.dataGridView1.TabIndex = 29;
             // 
             // table
@@ -212,7 +212,7 @@ namespace Cart_Practic
             this.table.Location = new System.Drawing.Point(338, 181);
             this.table.Name = "table";
             this.table.RowHeadersVisible = false;
-            this.table.Size = new System.Drawing.Size(261, 217);
+            this.table.Size = new System.Drawing.Size(261, 230);
             this.table.TabIndex = 28;
             // 
             // comboBox1
@@ -229,6 +229,7 @@ namespace Cart_Practic
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(149, 20);
             this.textBox4.TabIndex = 26;
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // textBox3
             // 
@@ -236,6 +237,7 @@ namespace Cart_Practic
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(121, 20);
             this.textBox3.TabIndex = 25;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // textBox2
             // 
@@ -256,7 +258,7 @@ namespace Cart_Practic
             this.pictureBox1.Location = new System.Drawing.Point(639, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(229, 156);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
@@ -304,7 +306,7 @@ namespace Cart_Practic
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "up_dish";
-            this.Size = new System.Drawing.Size(877, 401);
+            this.Size = new System.Drawing.Size(877, 414);
             this.Load += new System.EventHandler(this.up_dish_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();

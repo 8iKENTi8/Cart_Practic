@@ -47,7 +47,7 @@ namespace Cart_Practic
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(862, 9);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(25, 30);
@@ -67,7 +67,8 @@ namespace Cart_Practic
             // 
             // uS_dish11
             // 
-            this.uS_dish11.Location = new System.Drawing.Point(1, 42);
+            this.uS_dish11.BackColor = System.Drawing.Color.White;
+            this.uS_dish11.Location = new System.Drawing.Point(0, 42);
             this.uS_dish11.Name = "uS_dish11";
             this.uS_dish11.Size = new System.Drawing.Size(899, 535);
             this.uS_dish11.TabIndex = 11;
@@ -84,6 +85,7 @@ namespace Cart_Practic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(899, 572);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.uS_dish11);

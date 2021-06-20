@@ -103,10 +103,10 @@
     <Compile Include="формы админа\add_user.Designer.cs">
       <DependentUpon>add_user.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin_Form.cs">
+    <Compile Include="формы админа\Admin_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin_Form.Designer.cs">
+    <Compile Include="формы админа\Admin_Form.Designer.cs">
       <DependentUpon>Admin_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="формы админа\Adres_rest.cs">
@@ -122,10 +122,10 @@
       <DependentUpon>Category.cs</DependentUpon>
     </Compile>
     <Compile Include="DB.cs" />
-    <Compile Include="dishes.cs">
+    <Compile Include="формы пользователя\dishes.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="dishes.Designer.cs">
+    <Compile Include="формы пользователя\dishes.Designer.cs">
       <DependentUpon>dishes.cs</DependentUpon>
     </Compile>
     <Compile Include="формы админа\ingridients.cs">
@@ -154,16 +154,16 @@
     <Compile Include="Sign_Up.Designer.cs">
       <DependentUpon>Sign_Up.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl1.cs">
+    <Compile Include="формы пользователя\Tab_rest.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="формы пользователя\Tab_rest.Designer.cs">
+      <DependentUpon>Tab_rest.cs</DependentUpon>
     </Compile>
-    <Compile Include="User_Form.cs">
+    <Compile Include="формы пользователя\User_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User_Form.Designer.cs">
+    <Compile Include="формы пользователя\User_Form.Designer.cs">
       <DependentUpon>User_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="формы админа\users.cs">
@@ -190,7 +190,7 @@
     <EmbeddedResource Include="формы админа\add_user.resx">
       <DependentUpon>add_user.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin_Form.resx">
+    <EmbeddedResource Include="формы админа\Admin_Form.resx">
       <DependentUpon>Admin_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="формы админа\Adres_rest.resx">
@@ -199,7 +199,7 @@
     <EmbeddedResource Include="формы админа\Category.resx">
       <DependentUpon>Category.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="dishes.resx">
+    <EmbeddedResource Include="формы пользователя\dishes.resx">
       <DependentUpon>dishes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="формы админа\ingridients.resx">
@@ -224,10 +224,10 @@
     <EmbeddedResource Include="Sign_Up.resx">
       <DependentUpon>Sign_Up.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="формы пользователя\Tab_rest.resx">
+      <DependentUpon>Tab_rest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User_Form.resx">
+    <EmbeddedResource Include="формы пользователя\User_Form.resx">
       <DependentUpon>User_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="формы админа\users.resx">

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Cart_Practic
 {
-    public partial class UserControl1 : UserControl
+    public partial class Tab_rest : UserControl
     {
-        public UserControl1()
+        public Tab_rest()
         {
             InitializeComponent();
         }

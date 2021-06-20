@@ -29,14 +29,14 @@ namespace Cart_Practic
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button2 = new System.Windows.Forms.Button();
             this.table = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.up_dish1 = new Cart_Practic.up_dish();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.up_dish1 = new Cart_Practic.up_dish();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,8 +60,8 @@ namespace Cart_Practic
             // 
             this.table.AllowUserToAddRows = false;
             this.table.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.table.BackgroundColor = System.Drawing.Color.White;
             this.table.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -86,8 +86,15 @@ namespace Cart_Practic
             this.panel2.Controls.Add(this.table);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(926, 483);
+            this.panel2.Size = new System.Drawing.Size(926, 471);
             this.panel2.TabIndex = 9;
+            // 
+            // up_dish1
+            // 
+            this.up_dish1.Location = new System.Drawing.Point(0, 0);
+            this.up_dish1.Name = "up_dish1";
+            this.up_dish1.Size = new System.Drawing.Size(923, 462);
+            this.up_dish1.TabIndex = 6;
             // 
             // pictureBox1
             // 
@@ -113,7 +120,7 @@ namespace Cart_Practic
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(16, 496);
+            this.button1.Location = new System.Drawing.Point(16, 489);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 29);
             this.button1.TabIndex = 10;
@@ -121,21 +128,15 @@ namespace Cart_Practic
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // up_dish1
-            // 
-            this.up_dish1.Location = new System.Drawing.Point(0, 0);
-            this.up_dish1.Name = "up_dish1";
-            this.up_dish1.Size = new System.Drawing.Size(923, 477);
-            this.up_dish1.TabIndex = 6;
-            // 
             // US_dish1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Name = "US_dish1";
-            this.Size = new System.Drawing.Size(926, 528);
+            this.Size = new System.Drawing.Size(926, 521);
             this.Load += new System.EventHandler(this.US_dish1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
             this.panel2.ResumeLayout(false);
