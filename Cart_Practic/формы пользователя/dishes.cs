@@ -26,41 +26,100 @@ namespace Cart_Practic
         List<Control> list_names = new List<Control>();
         List<Control> list_cost = new List<Control>();
         List<Control> list_res = new List<Control>();
+        List<Control> list_img = new List<Control>();
 
 
 
         //Вывод блюд
         public void outputData(int count)
         {
-
+            //Названия
             for (int i = 0; i < count; i++)
             {
-                list_names[i].Text = table[5, i].Value.ToString();
+                    list_names[i].Text = table[5, i].Value.ToString();
+                Class_up_dish.names[i] = table[5, i].Value.ToString();
             }
 
+            for (int i = 0; i < 10; i++)
+            {
+                if (Class_up_dish.names[i] == Class_up_dish.names1[i])
+                {
+                    list_names[i].Text = "";
+                    Class_up_dish.names[i] = Class_up_dish.names1[i];
+                }
+                else
+                    Class_up_dish.names[i] = Class_up_dish.names1[i];
+            }
+
+            //Цены
             for (int i = 0; i < count; i++)
             {
                 list_cost[i].Text = table[3, i].Value.ToString()+" р";
+                Class_up_dish.cost[i] = table[3, i].Value.ToString();
             }
-            
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (Class_up_dish.cost[i] == Class_up_dish.cost1[i])
+                {
+                    list_cost[i].Text = "";
+                    Class_up_dish.cost[i] = Class_up_dish.cost1[i];
+                }
+                else
+                    Class_up_dish.cost[i] = Class_up_dish.cost1[i];
+            }
+
+            ////Картинки
+            //for (int i = 0; i < count; i++)
+            //{
+            //    string url = "";
+            //    url = $@"{tab.Rows[0][8]}";
+            //    if (url == "")
+            //    { }
+            //    else
+            //    {
+            //        list_img[i].loa
+            //    }
+            //    Class_up_dish.cost[i] = table[3, i].Value.ToString();
+            //}
+
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    if (Class_up_dish.cost[i] == Class_up_dish.cost1[i])
+            //    {
+            //        list_cost[i].Text = "";
+            //        Class_up_dish.cost[i] = Class_up_dish.cost1[i];
+            //    }
+            //    else
+            //        Class_up_dish.cost[i] = Class_up_dish.cost1[i];
+            //}
+
         }
 
         //добавление элементов в list
         public void listAdd()
         {
+            list_names.Add(name0);
             list_names.Add(name1);
             list_names.Add(name2);
-            list_names.Add(name3);
-            list_names.Add(name4); list_names.Add(name5);
-            list_names.Add(name6); list_names.Add(name7);
-            list_names.Add(name8); list_names.Add(name9);
-            list_names.Add(name10);
+            list_names.Add(name3); list_names.Add(name4);
+            list_names.Add(name5); list_names.Add(name6);
+            list_names.Add(name7); list_names.Add(name8);
+            list_names.Add(name9);
 
-            list_cost.Add(cost1); list_cost.Add(cost2);
-            list_cost.Add(cost3); list_cost.Add(cost4);
-            list_cost.Add(cost5); list_cost.Add(cost6);
-            list_cost.Add(cost7); list_cost.Add(cost8);
-            list_cost.Add(cost9); list_cost.Add(cost10);
+            list_cost.Add(cost0); list_cost.Add(cost1);
+            list_cost.Add(cost2); list_cost.Add(cost3);
+            list_cost.Add(cost4); list_cost.Add(cost5);
+            list_cost.Add(cost6); list_cost.Add(cost7);
+            list_cost.Add(cost8); list_cost.Add(cost9);
+
+            img0.ImageLocation= "";
+            img1.ImageLocation =table[8, 0].Value.ToString();
+            list_img.Add(img0); list_img.Add(img1);
+            list_img.Add(img2); list_img.Add(img3);
+            list_img.Add(img4); list_img.Add(img5);
+            list_img.Add(img6); list_img.Add(img7);
+            list_img.Add(img8); list_img.Add(img9);
 
             list_res.Add(res1); list_res.Add(res2);
             list_res.Add(res3); list_res.Add(res4);
@@ -132,7 +191,7 @@ namespace Cart_Practic
 
             listAdd();
 
-            outputData(count-1);
+            outputData(count);
 
 
         }
@@ -141,12 +200,64 @@ namespace Cart_Practic
         {
             check = page;
             textBox1.Text = page.ToString();
+
+            DB dB = new DB();
+
+            tab = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+
+            MySqlCommand command =
+                new MySqlCommand(" CALL `get_dish`(@p0);", dB.getConnection());
+            command.Parameters.Add("@p0", MySqlDbType.VarChar).Value = check.ToString();
+
+            adapter.SelectCommand = command;
+
+            adapter.Fill(tab);
+
+            table.DataSource = tab;
+
+
+
+            int count = table.Rows.Count - 1;
+
+
+            
+
+            outputData(count);
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
             check = 1;
             textBox1.Text = check.ToString();
+
+            DB dB = new DB();
+
+            tab = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+
+            MySqlCommand command =
+                new MySqlCommand(" CALL `get_dish`(@p0);", dB.getConnection());
+            command.Parameters.Add("@p0", MySqlDbType.VarChar).Value = check.ToString();
+
+            adapter.SelectCommand = command;
+
+            adapter.Fill(tab);
+
+            table.DataSource = tab;
+
+
+
+            int count = table.Rows.Count - 1;
+
+
+         
+
+            outputData(count);
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -160,6 +271,27 @@ namespace Cart_Practic
                 check -= 1;
             textBox1.Text = check.ToString();
 
+            DB dB = new DB();
+
+            tab = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+
+            MySqlCommand command =
+                new MySqlCommand(" CALL `get_dish`(@p0);", dB.getConnection());
+            command.Parameters.Add("@p0", MySqlDbType.VarChar).Value = check.ToString();
+
+            adapter.SelectCommand = command;
+
+            adapter.Fill(tab);
+
+            table.DataSource = tab;
+
+            int count = table.Rows.Count - 1;
+
+            outputData(count);
+
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -171,6 +303,27 @@ namespace Cart_Practic
             }
             check += 1;
             textBox1.Text = check.ToString();
+
+            DB dB = new DB();
+
+            tab = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+
+            MySqlCommand command =
+                new MySqlCommand(" CALL `get_dish`(@p0);", dB.getConnection());
+            command.Parameters.Add("@p0", MySqlDbType.VarChar).Value = check.ToString();
+
+            adapter.SelectCommand = command;
+
+            adapter.Fill(tab);
+
+            table.DataSource = tab;
+
+            int count = table.Rows.Count - 1;
+
+            outputData(count);
         }
     }
 }

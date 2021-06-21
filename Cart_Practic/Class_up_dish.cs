@@ -9,7 +9,15 @@ namespace Cart_Practic
     class Class_up_dish
     {
        static public string id,id_cat,id_res,id_ingr;
-        static public int id_res1;
+
+       static public string[] names = new string[10];
+       static public string[] names1 = new string[10];
+
+        static public string[] cost = new string[10];
+        static public string[] cost1 = new string[10];
+
+        static public string[] img = new string[10];
+        static public string[] img1 = new string[10];
 
         static public bool roleId(string role)
         {
