@@ -11,5 +11,13 @@ namespace Cart_Practic
        static public string id,id_cat,id_res,id_ingr;
         static public int id_res1;
 
+        static public bool roleId(string role)
+        {
+            if (role == "админ")
+                return true;
+            else
+                return false;
+        } 
+
     }
 }

@@ -73,6 +73,16 @@ namespace Cart_Practic.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2b22c3f5c79f188acfd76e225c87275b1 {
+            get {
+                object obj = ResourceManager.GetObject("2b22c3f5c79f188acfd76e225c87275b1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _8b3a53bea0f50cf59e5d27b4a81f6ede {
             get {
                 object obj = ResourceManager.GetObject("8b3a53bea0f50cf59e5d27b4a81f6ede", resourceCulture);
@@ -227,6 +237,16 @@ namespace Cart_Practic.Properties {
             get {
                 object obj = ResourceManager.GetObject("kisspng-computer-icons-malibu-jack-s-lexington-clip-art-5b09728a7948e8.6801144415" +
                         "273458024968", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maxresdefault {
+            get {
+                object obj = ResourceManager.GetObject("maxresdefault", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

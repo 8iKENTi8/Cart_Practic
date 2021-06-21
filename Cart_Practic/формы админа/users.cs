@@ -63,9 +63,9 @@ namespace Cart_Practic.формы_админы
         {
             try
             {
-                if (e.ColumnIndex == 6)
+                if (e.ColumnIndex == 4)
                 {
-                    string task = table.Rows[e.RowIndex].Cells[6].Value.ToString();
+                    string task = table.Rows[e.RowIndex].Cells[4].Value.ToString();
                     if (task == "Update")
                     {
                         if (MessageBox.Show("Обновить эту строку",
@@ -75,21 +75,25 @@ namespace Cart_Practic.формы_админы
                             int rowIndex = e.RowIndex;
 
                             DB db = new DB();
-                            MySqlCommand command = new MySqlCommand("UPDATE `restaurants` SET " +
-                                "`restaurant_id` = @ul, " +
-                                "`name` = @lg, `average_check` = @ps, " +
-                                "`beg_time` = @em, `end_time` = @em1, `description` = @em2" +
-                                " WHERE `restaurants`.`restaurant_id` = @ul", db.getConnection());
+                            MySqlCommand command = new MySqlCommand("UPDATE `users` SET `id` = @ul, `log` = @lg,  `email` = @em, `role_id` = @em1 WHERE `users`.`id` = @ul", db.getConnection());
 
                             command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
                             command.Parameters.Add("@lg", MySqlDbType.VarChar).Value = table[1, rowIndex].Value.ToString();
-                            command.Parameters.Add("@ps", MySqlDbType.VarChar).Value = table[2, rowIndex].Value.ToString();
-                            command.Parameters.Add("@em", MySqlDbType.VarChar).Value = table[3, rowIndex].Value.ToString();
-                            command.Parameters.Add("@em1", MySqlDbType.VarChar).Value = table[4, rowIndex].Value.ToString();
-                            command.Parameters.Add("@em2", MySqlDbType.VarChar).Value = table[5, rowIndex].Value.ToString();
+                            command.Parameters.Add("@em", MySqlDbType.VarChar).Value = table[2, rowIndex].Value.ToString();
+
+                            string role = table[3, rowIndex].Value.ToString();
+
+                           
+
+                            if (Class_up_dish.roleId(role))
+                                command.Parameters.Add("@em1", MySqlDbType.VarChar).Value = 1;
+                            else
+                                command.Parameters.Add("@em1", MySqlDbType.VarChar).Value = 2;
+
+
 
                             db.openConnection();
-                            if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Ресторан был обновлен"); }
+                            if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Пользователь был обновлен"); }
 
                             db.closeConnection();
                         }
@@ -105,9 +109,9 @@ namespace Cart_Practic.формы_админы
 
             try
             {
-                if (e.ColumnIndex == 7)
+                if (e.ColumnIndex == 5)
                 {
-                    string task = table.Rows[e.RowIndex].Cells[7].Value.ToString();
+                    string task = table.Rows[e.RowIndex].Cells[5].Value.ToString();
                     if (task == "Delete")
                     {
                         if (MessageBox.Show("Удалить эту строку",
@@ -117,16 +121,17 @@ namespace Cart_Practic.формы_админы
                             int rowIndex = e.RowIndex;
 
                             DB db = new DB();
-                            MySqlCommand command = new MySqlCommand("DELETE FROM `restaurants`" +
-                                " WHERE `restaurants`.`restaurant_id` = @ul ", db.getConnection());
+                            MySqlCommand command = new MySqlCommand("DELETE FROM `users`" +
+                                " WHERE `users`.`id` = @ul ", db.getConnection());
                             command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
 
                             table.Rows.RemoveAt(rowIndex);
 
                             db.openConnection();
-                            if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Ресторан был удален"); }
+                            if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Запись была удалена "); }
 
                             db.closeConnection();
+                            ReloadDB();
                         }
                     }
                     else if (task == "Insert")

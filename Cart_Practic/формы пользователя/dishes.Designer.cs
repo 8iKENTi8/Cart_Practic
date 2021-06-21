@@ -33,50 +33,82 @@ namespace Cart_Practic
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label28 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -123,16 +155,6 @@ namespace Cart_Practic
             this.label2.Size = new System.Drawing.Size(188, 63);
             this.label2.TabIndex = 2;
             this.label2.Text = "Описание Описание \r\nОписание \r\nОписание Описание";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Cart_Practic.Properties.Resources.s1200;
-            this.pictureBox1.Location = new System.Drawing.Point(7, 59);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(190, 144);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -189,16 +211,6 @@ namespace Cart_Practic
             this.label5.TabIndex = 2;
             this.label5.Text = "Описание Описание \r\nОписание \r\nОписание Описание";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Cart_Practic.Properties.Resources.s1200;
-            this.pictureBox2.Location = new System.Drawing.Point(7, 59);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(190, 144);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -254,16 +266,6 @@ namespace Cart_Practic
             this.label8.TabIndex = 2;
             this.label8.Text = "Описание Описание \r\nОписание \r\nОписание Описание";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Cart_Practic.Properties.Resources.s1200;
-            this.pictureBox3.Location = new System.Drawing.Point(7, 59);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(190, 144);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -281,7 +283,7 @@ namespace Cart_Practic
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.pictureBox4);
             this.panel4.Controls.Add(this.label12);
-            this.panel4.Location = new System.Drawing.Point(500, 362);
+            this.panel4.Location = new System.Drawing.Point(483, 365);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(200, 327);
             this.panel4.TabIndex = 7;
@@ -319,16 +321,6 @@ namespace Cart_Practic
             this.label11.TabIndex = 2;
             this.label11.Text = "Описание Описание \r\nОписание \r\nОписание Описание";
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Cart_Practic.Properties.Resources.s1200;
-            this.pictureBox4.Location = new System.Drawing.Point(7, 59);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(190, 144);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -346,7 +338,7 @@ namespace Cart_Practic
             this.panel5.Controls.Add(this.label14);
             this.panel5.Controls.Add(this.pictureBox5);
             this.panel5.Controls.Add(this.label15);
-            this.panel5.Location = new System.Drawing.Point(264, 362);
+            this.panel5.Location = new System.Drawing.Point(247, 365);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(200, 327);
             this.panel5.TabIndex = 6;
@@ -384,16 +376,6 @@ namespace Cart_Practic
             this.label14.TabIndex = 2;
             this.label14.Text = "Описание Описание \r\nОписание \r\nОписание Описание";
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Cart_Practic.Properties.Resources.s1200;
-            this.pictureBox5.Location = new System.Drawing.Point(7, 59);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(190, 144);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -411,7 +393,7 @@ namespace Cart_Practic
             this.panel6.Controls.Add(this.label17);
             this.panel6.Controls.Add(this.pictureBox6);
             this.panel6.Controls.Add(this.label18);
-            this.panel6.Location = new System.Drawing.Point(30, 362);
+            this.panel6.Location = new System.Drawing.Point(13, 365);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(200, 327);
             this.panel6.TabIndex = 5;
@@ -449,16 +431,6 @@ namespace Cart_Practic
             this.label17.TabIndex = 2;
             this.label17.Text = "Описание Описание \r\nОписание \r\nОписание Описание";
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Cart_Practic.Properties.Resources.s1200;
-            this.pictureBox6.Location = new System.Drawing.Point(7, 59);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(190, 144);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 1;
-            this.pictureBox6.TabStop = false;
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -469,10 +441,334 @@ namespace Cart_Practic
             this.label18.TabIndex = 1;
             this.label18.Text = "label18";
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.label19);
+            this.panel7.Controls.Add(this.button7);
+            this.panel7.Controls.Add(this.label20);
+            this.panel7.Controls.Add(this.pictureBox7);
+            this.panel7.Controls.Add(this.label21);
+            this.panel7.Location = new System.Drawing.Point(718, 365);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(200, 327);
+            this.panel7.TabIndex = 8;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label19.ForeColor = System.Drawing.Color.DarkRed;
+            this.label19.Location = new System.Drawing.Point(3, 294);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(52, 21);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "350 р";
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button7.Location = new System.Drawing.Point(76, 287);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(115, 34);
+            this.button7.TabIndex = 1;
+            this.button7.Text = "Read More";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label20.Location = new System.Drawing.Point(3, 206);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(188, 63);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "Описание Описание \r\nОписание \r\nОписание Описание";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label21.Location = new System.Drawing.Point(3, 16);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(86, 24);
+            this.label21.TabIndex = 1;
+            this.label21.Text = "label21";
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.label22);
+            this.panel8.Controls.Add(this.button8);
+            this.panel8.Controls.Add(this.label23);
+            this.panel8.Controls.Add(this.pictureBox8);
+            this.panel8.Controls.Add(this.label24);
+            this.panel8.Location = new System.Drawing.Point(715, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(200, 327);
+            this.panel8.TabIndex = 9;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label22.ForeColor = System.Drawing.Color.DarkRed;
+            this.label22.Location = new System.Drawing.Point(3, 294);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(52, 21);
+            this.label22.TabIndex = 3;
+            this.label22.Text = "350 р";
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button8.Location = new System.Drawing.Point(76, 287);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(115, 34);
+            this.button8.TabIndex = 1;
+            this.button8.Text = "Read More";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label23.Location = new System.Drawing.Point(3, 206);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(188, 63);
+            this.label23.TabIndex = 2;
+            this.label23.Text = "Описание Описание \r\nОписание \r\nОписание Описание";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label24.Location = new System.Drawing.Point(3, 16);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(86, 24);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "label24";
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.label25);
+            this.panel9.Controls.Add(this.button9);
+            this.panel9.Controls.Add(this.label26);
+            this.panel9.Controls.Add(this.pictureBox9);
+            this.panel9.Controls.Add(this.label27);
+            this.panel9.Location = new System.Drawing.Point(944, 365);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(200, 327);
+            this.panel9.TabIndex = 9;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label25.ForeColor = System.Drawing.Color.DarkRed;
+            this.label25.Location = new System.Drawing.Point(3, 294);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(52, 21);
+            this.label25.TabIndex = 3;
+            this.label25.Text = "350 р";
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button9.Location = new System.Drawing.Point(76, 287);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(115, 34);
+            this.button9.TabIndex = 1;
+            this.button9.Text = "Read More";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label26.Location = new System.Drawing.Point(3, 206);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(188, 63);
+            this.label26.TabIndex = 2;
+            this.label26.Text = "Описание Описание \r\nОписание \r\nОписание Описание";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label27.Location = new System.Drawing.Point(3, 16);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(86, 24);
+            this.label27.TabIndex = 1;
+            this.label27.Text = "label27";
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.label28);
+            this.panel10.Controls.Add(this.button10);
+            this.panel10.Controls.Add(this.label29);
+            this.panel10.Controls.Add(this.pictureBox10);
+            this.panel10.Controls.Add(this.label30);
+            this.panel10.Location = new System.Drawing.Point(944, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(200, 327);
+            this.panel10.TabIndex = 10;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label28.ForeColor = System.Drawing.Color.DarkRed;
+            this.label28.Location = new System.Drawing.Point(3, 294);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(52, 21);
+            this.label28.TabIndex = 3;
+            this.label28.Text = "350 р";
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button10.Location = new System.Drawing.Point(76, 287);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(115, 34);
+            this.button10.TabIndex = 1;
+            this.button10.Text = "Read More";
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label29.Location = new System.Drawing.Point(3, 206);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(188, 63);
+            this.label29.TabIndex = 2;
+            this.label29.Text = "Описание Описание \r\nОписание \r\nОписание Описание";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label30.Location = new System.Drawing.Point(3, 16);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(86, 24);
+            this.label30.TabIndex = 1;
+            this.label30.Text = "label30";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::Cart_Practic.Properties.Resources.s1200;
+            this.pictureBox10.Location = new System.Drawing.Point(7, 59);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(190, 144);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 1;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Cart_Practic.Properties.Resources.s1200;
+            this.pictureBox9.Location = new System.Drawing.Point(7, 59);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(190, 144);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 1;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Cart_Practic.Properties.Resources.s1200;
+            this.pictureBox8.Location = new System.Drawing.Point(7, 59);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(190, 144);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 1;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Cart_Practic.Properties.Resources.s1200;
+            this.pictureBox7.Location = new System.Drawing.Point(7, 59);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(190, 144);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 1;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Cart_Practic.Properties.Resources.maxresdefault;
+            this.pictureBox4.Location = new System.Drawing.Point(7, 59);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(190, 144);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Cart_Practic.Properties.Resources.s1200;
+            this.pictureBox5.Location = new System.Drawing.Point(7, 59);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(190, 144);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Cart_Practic.Properties.Resources.s1200;
+            this.pictureBox6.Location = new System.Drawing.Point(7, 59);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(190, 144);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 1;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Cart_Practic.Properties.Resources.s1200;
+            this.pictureBox3.Location = new System.Drawing.Point(7, 59);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(190, 144);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Cart_Practic.Properties.Resources.s1200;
+            this.pictureBox2.Location = new System.Drawing.Point(7, 59);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(190, 144);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Cart_Practic.Properties.Resources.s1200;
+            this.pictureBox1.Location = new System.Drawing.Point(7, 59);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(190, 144);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // dishes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel10);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel6);
@@ -480,26 +776,38 @@ namespace Cart_Practic
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "dishes";
-            this.Size = new System.Drawing.Size(731, 695);
+            this.Size = new System.Drawing.Size(1147, 695);
             this.Load += new System.EventHandler(this.dishes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -542,5 +850,29 @@ namespace Cart_Practic
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Label label30;
     }
 }

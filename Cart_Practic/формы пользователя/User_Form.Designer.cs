@@ -158,7 +158,7 @@ namespace Cart_Practic
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(223, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1046, 29);
+            this.panel2.Size = new System.Drawing.Size(1233, 29);
             this.panel2.TabIndex = 4;
             // 
             // bunifuElipse2
@@ -168,32 +168,32 @@ namespace Cart_Practic
             // 
             // uScab1
             // 
-            this.uScab1.Location = new System.Drawing.Point(223, 27);
+            this.uScab1.Location = new System.Drawing.Point(223, 30);
             this.uScab1.Name = "uScab1";
-            this.uScab1.Size = new System.Drawing.Size(1043, 696);
+            this.uScab1.Size = new System.Drawing.Size(1233, 696);
             this.uScab1.TabIndex = 7;
             this.uScab1.Load += new System.EventHandler(this.uScab1_Load);
             // 
             // resta1
             // 
-            this.resta1.Location = new System.Drawing.Point(223, 27);
+            this.resta1.Location = new System.Drawing.Point(228, 30);
             this.resta1.Name = "resta1";
-            this.resta1.Size = new System.Drawing.Size(843, 683);
+            this.resta1.Size = new System.Drawing.Size(1233, 683);
             this.resta1.TabIndex = 6;
             this.resta1.Load += new System.EventHandler(this.resta1_Load);
             // 
             // dishes1
             // 
-            this.dishes1.Location = new System.Drawing.Point(223, 27);
+            this.dishes1.Location = new System.Drawing.Point(223, 30);
             this.dishes1.Name = "dishes1";
-            this.dishes1.Size = new System.Drawing.Size(1046, 683);
+            this.dishes1.Size = new System.Drawing.Size(1233, 726);
             this.dishes1.TabIndex = 5;
             // 
             // User_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1269, 756);
+            this.ClientSize = new System.Drawing.Size(1456, 756);
             this.Controls.Add(this.uScab1);
             this.Controls.Add(this.resta1);
             this.Controls.Add(this.dishes1);

@@ -268,6 +268,8 @@
   <ItemGroup>
     <Content Include="iconfinder_3521351_beach_island_summer_vacation_icon.ico" />
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\maxresdefault.jpg" />
+    <None Include="Resources\2b22c3f5c79f188acfd76e225c87275b1.jpg" />
     <None Include="Resources\2b22c3f5c79f188acfd76e225c87275b.jpg" />
     <None Include="Resources\8b3a53bea0f50cf59e5d27b4a81f6ede.jpg" />
     <None Include="Resources\iconfinder_2561289_refresh_ccw_icon_32px1.png" />
