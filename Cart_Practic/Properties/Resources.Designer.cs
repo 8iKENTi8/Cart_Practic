@@ -93,6 +93,26 @@ namespace Cart_Practic.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_211686_back_arrow_icon_32px {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_211686_back_arrow_icon_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_211686_back_arrow_icon_32px__1_ {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_211686_back_arrow_icon_32px (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_211817_search_strong_icon_32px {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_211817_search_strong_icon_32px", resourceCulture);
@@ -203,6 +223,56 @@ namespace Cart_Practic.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_4829860_arrow_back_left_icon_32px {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_4829860_arrow_back_left_icon_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_4829860_arrow_back_left_icon_32px__1_ {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_4829860_arrow_back_left_icon_32px (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_4829860_arrow_back_left_icon_32px__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_4829860_arrow_back_left_icon_32px (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_4829860_arrow_back_left_icon_32px__2_ {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_4829860_arrow_back_left_icon_32px (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_4829860_arrow_back_left_icon_32px__2_1 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_4829860_arrow_back_left_icon_32px (2)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_5027866_businessman_man_user_icon_512px {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_5027866_businessman_man_user_icon_512px", resourceCulture);
@@ -257,6 +327,26 @@ namespace Cart_Practic.Properties {
         internal static System.Drawing.Bitmap s1200 {
             get {
                 object obj = ResourceManager.GetObject("s1200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap up {
+            get {
+                object obj = ResourceManager.GetObject("up", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap up1 {
+            get {
+                object obj = ResourceManager.GetObject("up1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -44,11 +44,15 @@ namespace Cart_Practic
 
             adapter.Fill(table);
 
-            Class_up_dish.id= table.Rows[0][1].ToString();
-            Class_up_dish.id_ingr = table.Rows[0][3].ToString();
+           
 
             if (table.Rows.Count > 0)
+            {
+                Class_up_dish.id = table.Rows[0][1].ToString();
+                Class_up_dish.id_ingr = table.Rows[0][3].ToString();
                 return true;
+            }
+                
 
             command =
               new MySqlCommand("SELECT * FROM `users` WHERE `log` = @ul AND" +
@@ -62,11 +66,12 @@ namespace Cart_Practic
 
             adapter.Fill(table);
 
-            Class_up_dish.id = table.Rows[0][1].ToString();
-            Class_up_dish.id_ingr = table.Rows[0][3].ToString();
+            
 
             if (table.Rows.Count > 0)
             {
+                Class_up_dish.id = table.Rows[0][1].ToString();
+                Class_up_dish.id_ingr = table.Rows[0][3].ToString();
                 a = 1;
                 return true;
             }

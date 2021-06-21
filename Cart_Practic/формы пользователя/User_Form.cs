@@ -62,5 +62,10 @@ namespace Cart_Practic
         {
            
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -43,8 +43,10 @@ namespace Cart_Practic
             this.uScab1 = new Cart_Practic.UScab();
             this.resta1 = new Cart_Practic.resta();
             this.dishes1 = new Cart_Practic.dishes();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -155,6 +157,7 @@ namespace Cart_Practic
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
+            this.panel2.Controls.Add(this.label8);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(223, 0);
             this.panel2.Name = "panel2";
@@ -189,6 +192,18 @@ namespace Cart_Practic
             this.dishes1.Size = new System.Drawing.Size(1233, 726);
             this.dishes1.TabIndex = 5;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(1205, -3);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(25, 30);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "x";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
             // User_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,6 +220,8 @@ namespace Cart_Practic
             this.Text = "User_Form";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -222,5 +239,6 @@ namespace Cart_Practic
         private dishes dishes1;
         private resta resta1;
         private UScab uScab1;
+        private System.Windows.Forms.Label label8;
     }
 }
