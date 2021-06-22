@@ -55,6 +55,7 @@ namespace Cart_Practic
         List<Control> list_cost = new List<Control>();
         List<Control> list_res = new List<Control>();
         List<PictureBox> list_img = new List<PictureBox>();
+        List<Button> list_btn = new List<Button>();
 
 
 
@@ -65,6 +66,7 @@ namespace Cart_Practic
             for (int i = 0; i < count; i++)
             {
                     list_names[i].Text = table[5, i].Value.ToString();
+                list_btn[i].Visible = true;
                 Class_up_dish.names[i] = table[5, i].Value.ToString();
             }
 
@@ -73,6 +75,7 @@ namespace Cart_Practic
                 if (Class_up_dish.names[i] == Class_up_dish.names1[i])
                 {
                     list_names[i].Text = "";
+                    list_btn[i].Visible = false;
                     Class_up_dish.names[i] = Class_up_dish.names1[i];
                 }
                 else
@@ -149,6 +152,12 @@ namespace Cart_Practic
             list_res.Add(res5); list_res.Add(res6);
             list_res.Add(res7); list_res.Add(res8);
             list_res.Add(res9); list_res.Add(res10);
+
+            list_btn.Add(but0); list_btn.Add(but1);
+            list_btn.Add(but2); list_btn.Add(but3);
+            list_btn.Add(but4); list_btn.Add(but5);
+            list_btn.Add(but6); list_btn.Add(but7);
+            list_btn.Add(but8); list_btn.Add(but9);
         }
 
         // Кол-во страниц
@@ -394,7 +403,7 @@ namespace Cart_Practic
         }
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Convert.ToString(comboBox1.SelectedItem) != "По умолчанию")
+            if (Convert.ToString(comboBox2.SelectedItem) != "По умолчанию")
             {
                 getIdCat(comboBox2.SelectedItem.ToString());
 
@@ -402,6 +411,31 @@ namespace Cart_Practic
 
                 PoYml(Class_up_dish.com);
             }
+            else
+            {
+                Class_up_dish.com = "CALL `get_dish`(@p0);";
+                PoYml(Class_up_dish.com);
+            }
+
         }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                if (txtSearch.Text != "")
+                {
+                    Class_up_dish.com = $"CALL `get_dish_search`(@p0, '{txtSearch.Text}');";
+
+                    PoYml(Class_up_dish.com);
+                }
+                else
+                {
+                    Class_up_dish.com = "CALL `get_dish`(@p0);";
+                    PoYml(Class_up_dish.com);
+                }
+            }
+
+            }
     }
 }

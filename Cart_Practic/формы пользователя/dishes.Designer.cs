@@ -29,7 +29,7 @@ namespace Cart_Practic
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cost0 = new System.Windows.Forms.Label();
             this.but0 = new System.Windows.Forms.Button();
@@ -56,7 +56,7 @@ namespace Cart_Practic
             this.name7 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.cost6 = new System.Windows.Forms.Label();
-            this.bu6 = new System.Windows.Forms.Button();
+            this.but6 = new System.Windows.Forms.Button();
             this.res7 = new System.Windows.Forms.Label();
             this.img6 = new System.Windows.Forms.PictureBox();
             this.name6 = new System.Windows.Forms.Label();
@@ -100,6 +100,8 @@ namespace Cart_Practic
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img0)).BeginInit();
             this.panel2.SuspendLayout();
@@ -121,6 +123,7 @@ namespace Cart_Practic
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -382,7 +385,7 @@ namespace Cart_Practic
             // panel5
             // 
             this.panel5.Controls.Add(this.cost6);
-            this.panel5.Controls.Add(this.bu6);
+            this.panel5.Controls.Add(this.but6);
             this.panel5.Controls.Add(this.res7);
             this.panel5.Controls.Add(this.img6);
             this.panel5.Controls.Add(this.name6);
@@ -402,17 +405,17 @@ namespace Cart_Practic
             this.cost6.TabIndex = 3;
             this.cost6.Text = "350 р";
             // 
-            // bu6
+            // but6
             // 
-            this.bu6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.bu6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bu6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bu6.Location = new System.Drawing.Point(76, 287);
-            this.bu6.Name = "bu6";
-            this.bu6.Size = new System.Drawing.Size(115, 34);
-            this.bu6.TabIndex = 1;
-            this.bu6.Text = "Read More";
-            this.bu6.UseVisualStyleBackColor = false;
+            this.but6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.but6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.but6.Location = new System.Drawing.Point(76, 287);
+            this.but6.Name = "but6";
+            this.but6.Size = new System.Drawing.Size(115, 34);
+            this.but6.TabIndex = 1;
+            this.but6.Text = "Read More";
+            this.but6.UseVisualStyleBackColor = false;
             // 
             // res7
             // 
@@ -841,8 +844,8 @@ namespace Cart_Practic
             // table
             // 
             this.table.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.table.BackgroundColor = System.Drawing.Color.White;
             this.table.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -891,10 +894,30 @@ namespace Cart_Practic
             this.comboBox2.TabIndex = 23;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Cart_Practic.Properties.Resources.iconfinder_211817_search_strong_icon_32px;
+            this.pictureBox1.Location = new System.Drawing.Point(954, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(23, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(995, 9);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(148, 20);
+            this.txtSearch.TabIndex = 24;
+            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
+            // 
             // dishes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
@@ -949,6 +972,7 @@ namespace Cart_Practic
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -982,7 +1006,7 @@ namespace Cart_Practic
         private System.Windows.Forms.Label name7;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label cost6;
-        private System.Windows.Forms.Button bu6;
+        private System.Windows.Forms.Button but6;
         private System.Windows.Forms.Label res7;
         private System.Windows.Forms.PictureBox img6;
         private System.Windows.Forms.Label name6;
@@ -1026,5 +1050,7 @@ namespace Cart_Practic
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtSearch;
     }
 }
