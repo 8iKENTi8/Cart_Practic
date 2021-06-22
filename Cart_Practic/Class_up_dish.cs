@@ -8,7 +8,9 @@ namespace Cart_Practic
 {
     class Class_up_dish
     {
-       static public string id,id_cat,id_res,id_ingr;
+       static public string id,id_cat,id_res,id_ingr,ingr,ingr1,com;
+
+        
 
        static public string[] names = new string[10];
        static public string[] names1 = new string[10];

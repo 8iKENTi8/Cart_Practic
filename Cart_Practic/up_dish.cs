@@ -149,6 +149,7 @@ namespace Cart_Practic
                 " AND `restaurants`.`restaurant_id`=`restaurant_addresses`.`restaurant_id`", dB.getConnection());
             command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = Class_up_dish.id_res;
 
+            Class_up_dish.ingr1 = Class_up_dish.id_res;
             adapter.SelectCommand = command;
 
             adapter.Fill(tab);
@@ -244,18 +245,121 @@ namespace Cart_Practic
 
         private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            int rowIndex = e.RowIndex;
 
+          string a=  table.SelectedCells.ToString();
         }
 
         private void add_ingr_Click(object sender, EventArgs e)
         {
-            dataGridView1.ClearSelection();
-            
+            if (Class_up_dish.ingr != "")
+            {
+                Sostav.Text += "," + Class_up_dish.ingr;
+                
+
+                DB db = new DB();
+                MySqlCommand command = new MySqlCommand("UPDATE `dishes` SET `structure` = @ul1 WHERE `dishes`.`dish_id` = @ul", db.getConnection());
+
+                command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = Class_up_dish.id;
+                command.Parameters.Add("@ul1", MySqlDbType.VarChar).Value = Sostav.Text;
+
+
+                db.openConnection();
+                if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Ингридиент добавлен"); }
+
+                db.closeConnection();
+
+
+
+                Class_up_dish.ingr = "";
+            }
+            else
+                MessageBox.Show("Выберете ингридиент");
+          
+
         }
 
         private void drop_ingr_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows[1].Selected = true;
+            if (Class_up_dish.ingr != null)
+            {
+                if (Sostav.Text.Contains(Class_up_dish.ingr))
+                {
+                    Class_up_dish.ingr += ",";
+                    Sostav.Text = Sostav.Text.Replace(Class_up_dish.ingr, "");
+                   
+                    DB db = new DB();
+                    MySqlCommand command = new MySqlCommand("UPDATE `dishes` SET `structure` = @ul1 WHERE `dishes`.`dish_id` = @ul", db.getConnection());
+
+                    command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = Class_up_dish.id;
+                    command.Parameters.Add("@ul1", MySqlDbType.VarChar).Value = Sostav.Text;
+
+
+                    db.openConnection();
+                    if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Ингридиент удален"); }
+
+                    db.closeConnection();
+                    Class_up_dish.ingr = null;
+                }
+                else
+                    MessageBox.Show("В этом блюде нет такого ингридиента");
+                
+                
+            }
+            else
+                MessageBox.Show("Выберете ингридиент");
+        }
+
+        private void table_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Class_up_dish.ingr = table[e.ColumnIndex, e.RowIndex].Value.ToString();
+           
+        }
+
+        //Получаем id categorii
+        public void getDataCat()
+        {
+            DB db = new DB();
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `categories` WHERE `categories`.`name`=@ul", db.getConnection());
+
+            command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = comboBox1.Text;
+           
+
+            tab = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+
+            adapter.SelectCommand = command;
+
+            adapter.Fill(tab);
+
+          Class_up_dish.id_cat= tab.Rows[0][0].ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DB db = new DB();
+            MySqlCommand command = new MySqlCommand("UPDATE `dishes` SET `category_id` = @ul1,`restaurant_id` = @ul2, `cost` = @ul3, `name` = @ul31, `beg_time` = @tm, `end_time` = @tm1  WHERE `dishes`.`dish_id` = @id", db.getConnection());
+            getDataCat();
+            command.Parameters.Add("@ul1", MySqlDbType.VarChar).Value = Class_up_dish.id_cat;
+            command.Parameters.Add("@ul2", MySqlDbType.VarChar).Value = Class_up_dish.ingr1;
+            command.Parameters.Add("@ul3", MySqlDbType.VarChar).Value = textBox2.Text;
+            command.Parameters.Add("@ul31", MySqlDbType.VarChar).Value = textBox1.Text;
+            command.Parameters.Add("@tm", MySqlDbType.VarChar).Value = maskedTextBox1.Text;
+            command.Parameters.Add("@tm1", MySqlDbType.VarChar).Value = maskedTextBox2.Text;
+            command.Parameters.Add("@id", MySqlDbType.VarChar).Value = Class_up_dish.id;
+
+
+            db.openConnection();
+            if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Запись была Обновлена"); }
+
+            db.closeConnection();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Class_up_dish.ingr1 = dataGridView1[0, e.RowIndex].Value.ToString();
         }
     }
 }

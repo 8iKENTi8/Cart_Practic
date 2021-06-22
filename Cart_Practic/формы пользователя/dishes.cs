@@ -16,6 +16,34 @@ namespace Cart_Practic
         public dishes()
         {
             InitializeComponent();
+
+            comboBox1.Text = "По умолчанию";
+            comboBox1.Items.Add("По умолчанию");
+            comboBox1.Items.Add("По возрастанию");
+            comboBox1.Items.Add("По Убыванию");
+
+            comboBox2.Text = "По умолчанию";
+            comboBox2.Items.Add("По умолчанию");
+
+            DB dB = new DB();
+
+            DataTable tab = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            MySqlCommand command =
+                new MySqlCommand("SELECT * " +
+                "FROM `categories`", dB.getConnection());
+
+            adapter.SelectCommand = command;
+
+            adapter.Fill(tab);
+
+
+            for (int i = 0; i < tab.Rows.Count; i++)
+            {
+                comboBox2.Items.Add(tab.Rows[i][1].ToString());
+            }
         }
 
         DataTable tab;
@@ -26,7 +54,7 @@ namespace Cart_Practic
         List<Control> list_names = new List<Control>();
         List<Control> list_cost = new List<Control>();
         List<Control> list_res = new List<Control>();
-        List<Control> list_img = new List<Control>();
+        List<PictureBox> list_img = new List<PictureBox>();
 
 
 
@@ -70,29 +98,25 @@ namespace Cart_Practic
             }
 
             ////Картинки
-            //for (int i = 0; i < count; i++)
-            //{
-            //    string url = "";
-            //    url = $@"{tab.Rows[0][8]}";
-            //    if (url == "")
-            //    { }
-            //    else
-            //    {
-            //        list_img[i].loa
-            //    }
-            //    Class_up_dish.cost[i] = table[3, i].Value.ToString();
-            //}
+            
 
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    if (Class_up_dish.cost[i] == Class_up_dish.cost1[i])
-            //    {
-            //        list_cost[i].Text = "";
-            //        Class_up_dish.cost[i] = Class_up_dish.cost1[i];
-            //    }
-            //    else
-            //        Class_up_dish.cost[i] = Class_up_dish.cost1[i];
-            //}
+            for (int i = 0; i < count; i++)
+            {
+                list_img[i].ImageLocation= table[8, i].Value.ToString(); 
+                Class_up_dish.img[i] = table[8, i].Value.ToString();
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (Class_up_dish.img[i] == Class_up_dish.img1[i])
+                {
+                    list_img[i].ImageLocation = "";
+                    Class_up_dish.img[i] = Class_up_dish.img1[i];
+                }
+                else
+                    Class_up_dish.img[i] = Class_up_dish.img1[i];
+            }
+
 
         }
 
@@ -113,8 +137,7 @@ namespace Cart_Practic
             list_cost.Add(cost6); list_cost.Add(cost7);
             list_cost.Add(cost8); list_cost.Add(cost9);
 
-            img0.ImageLocation= "";
-            img1.ImageLocation =table[8, 0].Value.ToString();
+           
             list_img.Add(img0); list_img.Add(img1);
             list_img.Add(img2); list_img.Add(img3);
             list_img.Add(img4); list_img.Add(img5);
@@ -157,15 +180,14 @@ namespace Cart_Practic
             return result;
         }
 
-        private void dishes_Load(object sender, EventArgs e)
+        public void PoYml(string com) 
         {
-            page= GetPageCount();
+            page = GetPageCount();
 
             table.Visible = false;
 
             textBox1.Text = check.ToString();
 
-            
 
             DB dB = new DB();
 
@@ -173,9 +195,9 @@ namespace Cart_Practic
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            
+
             MySqlCommand command =
-                new MySqlCommand(" CALL `get_dish`(@p0);", dB.getConnection());
+                new MySqlCommand(com, dB.getConnection());
             command.Parameters.Add("@p0", MySqlDbType.VarChar).Value = check.ToString();
 
             adapter.SelectCommand = command;
@@ -184,15 +206,20 @@ namespace Cart_Practic
 
             table.DataSource = tab;
 
-           
 
-            int count = table.Rows.Count-1;
+
+            int count = table.Rows.Count - 1;
 
 
             listAdd();
 
             outputData(count);
+        }
 
+        private void dishes_Load(object sender, EventArgs e)
+        {
+            Class_up_dish.com = "CALL `get_dish`(@p0); ";
+            PoYml(Class_up_dish.com);
 
         }
 
@@ -209,7 +236,7 @@ namespace Cart_Practic
 
 
             MySqlCommand command =
-                new MySqlCommand(" CALL `get_dish`(@p0);", dB.getConnection());
+                new MySqlCommand(Class_up_dish.com, dB.getConnection());
             command.Parameters.Add("@p0", MySqlDbType.VarChar).Value = check.ToString();
 
             adapter.SelectCommand = command;
@@ -241,7 +268,7 @@ namespace Cart_Practic
 
 
             MySqlCommand command =
-                new MySqlCommand(" CALL `get_dish`(@p0);", dB.getConnection());
+                new MySqlCommand(Class_up_dish.com, dB.getConnection());
             command.Parameters.Add("@p0", MySqlDbType.VarChar).Value = check.ToString();
 
             adapter.SelectCommand = command;
@@ -253,9 +280,6 @@ namespace Cart_Practic
 
 
             int count = table.Rows.Count - 1;
-
-
-         
 
             outputData(count);
         }
@@ -279,7 +303,7 @@ namespace Cart_Practic
 
 
             MySqlCommand command =
-                new MySqlCommand(" CALL `get_dish`(@p0);", dB.getConnection());
+                new MySqlCommand(Class_up_dish.com, dB.getConnection());
             command.Parameters.Add("@p0", MySqlDbType.VarChar).Value = check.ToString();
 
             adapter.SelectCommand = command;
@@ -312,7 +336,7 @@ namespace Cart_Practic
 
 
             MySqlCommand command =
-                new MySqlCommand(" CALL `get_dish`(@p0);", dB.getConnection());
+                new MySqlCommand(Class_up_dish.com, dB.getConnection());
             command.Parameters.Add("@p0", MySqlDbType.VarChar).Value = check.ToString();
 
             adapter.SelectCommand = command;
@@ -324,6 +348,60 @@ namespace Cart_Practic
             int count = table.Rows.Count - 1;
 
             outputData(count);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Convert.ToString( comboBox1.SelectedItem )== "По умолчанию")
+            {
+                Class_up_dish.com = "CALL `get_dish`(@p0);";
+                PoYml(Class_up_dish.com);
+            }
+
+            if (Convert.ToString(comboBox1.SelectedItem) == "По возрастанию")
+            {
+                Class_up_dish.com = "CALL `get_dish_up`(@p0);";
+                PoYml(Class_up_dish.com);
+            }
+
+            if (Convert.ToString(comboBox1.SelectedItem) == "По Убыванию")
+            {
+                Class_up_dish.com = "CALL `get_dish_down`(@p0);";
+                PoYml(Class_up_dish.com);
+            }
+
+        }
+
+       // получить id категории
+       public void getIdCat(string a)
+        {
+            DB db = new DB();
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `categories` WHERE `categories`.`name`=@ul", db.getConnection());
+
+            command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = a;
+
+
+            tab = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+
+            adapter.SelectCommand = command;
+
+            adapter.Fill(tab);
+
+            Class_up_dish.id_cat = tab.Rows[0][0].ToString();
+        }
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Convert.ToString(comboBox1.SelectedItem) != "По умолчанию")
+            {
+                getIdCat(comboBox2.SelectedItem.ToString());
+
+                Class_up_dish.com =  $"CALL `get_dish_cat`(@p0, {Class_up_dish.id_cat});";
+
+                PoYml(Class_up_dish.com);
+            }
         }
     }
 }

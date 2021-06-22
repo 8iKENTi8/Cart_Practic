@@ -29,64 +29,64 @@ namespace Cart_Practic
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cost0 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.but0 = new System.Windows.Forms.Button();
             this.res1 = new System.Windows.Forms.Label();
             this.img0 = new System.Windows.Forms.PictureBox();
             this.name0 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cost1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.but1 = new System.Windows.Forms.Button();
             this.res2 = new System.Windows.Forms.Label();
             this.img1 = new System.Windows.Forms.PictureBox();
             this.name1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cost2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.but2 = new System.Windows.Forms.Button();
             this.res3 = new System.Windows.Forms.Label();
             this.img2 = new System.Windows.Forms.PictureBox();
             this.name2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cost7 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.but7 = new System.Windows.Forms.Button();
             this.res8 = new System.Windows.Forms.Label();
             this.img7 = new System.Windows.Forms.PictureBox();
             this.name7 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.cost6 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.bu6 = new System.Windows.Forms.Button();
             this.res7 = new System.Windows.Forms.Label();
             this.img6 = new System.Windows.Forms.PictureBox();
             this.name6 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.cost5 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.but5 = new System.Windows.Forms.Button();
             this.res6 = new System.Windows.Forms.Label();
             this.img5 = new System.Windows.Forms.PictureBox();
             this.name5 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.cost8 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
+            this.but8 = new System.Windows.Forms.Button();
             this.res9 = new System.Windows.Forms.Label();
             this.img8 = new System.Windows.Forms.PictureBox();
             this.name8 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.cost3 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
+            this.but3 = new System.Windows.Forms.Button();
             this.res4 = new System.Windows.Forms.Label();
             this.img3 = new System.Windows.Forms.PictureBox();
             this.name3 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.cost9 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
+            this.but9 = new System.Windows.Forms.Button();
             this.res10 = new System.Windows.Forms.Label();
             this.img9 = new System.Windows.Forms.PictureBox();
             this.name9 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.cost4 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
+            this.but4 = new System.Windows.Forms.Button();
             this.res5 = new System.Windows.Forms.Label();
             this.img4 = new System.Windows.Forms.PictureBox();
             this.name4 = new System.Windows.Forms.Label();
@@ -96,6 +96,10 @@ namespace Cart_Practic
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.table = new System.Windows.Forms.DataGridView();
+            this.filtcost = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img0)).BeginInit();
             this.panel2.SuspendLayout();
@@ -122,11 +126,11 @@ namespace Cart_Practic
             // panel1
             // 
             this.panel1.Controls.Add(this.cost0);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.but0);
             this.panel1.Controls.Add(this.res1);
             this.panel1.Controls.Add(this.img0);
             this.panel1.Controls.Add(this.name0);
-            this.panel1.Location = new System.Drawing.Point(13, 3);
+            this.panel1.Location = new System.Drawing.Point(12, 69);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 327);
             this.panel1.TabIndex = 0;
@@ -142,17 +146,17 @@ namespace Cart_Practic
             this.cost0.TabIndex = 3;
             this.cost0.Text = "350 р";
             // 
-            // button1
+            // but0
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(76, 287);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 34);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Read More";
-            this.button1.UseVisualStyleBackColor = false;
+            this.but0.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.but0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but0.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.but0.Location = new System.Drawing.Point(76, 287);
+            this.but0.Name = "but0";
+            this.but0.Size = new System.Drawing.Size(115, 34);
+            this.but0.TabIndex = 1;
+            this.but0.Text = "Read More";
+            this.but0.UseVisualStyleBackColor = false;
             // 
             // res1
             // 
@@ -186,11 +190,11 @@ namespace Cart_Practic
             // panel2
             // 
             this.panel2.Controls.Add(this.cost1);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.but1);
             this.panel2.Controls.Add(this.res2);
             this.panel2.Controls.Add(this.img1);
             this.panel2.Controls.Add(this.name1);
-            this.panel2.Location = new System.Drawing.Point(247, 3);
+            this.panel2.Location = new System.Drawing.Point(246, 69);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 327);
             this.panel2.TabIndex = 1;
@@ -206,17 +210,17 @@ namespace Cart_Practic
             this.cost1.TabIndex = 3;
             this.cost1.Text = "350 р";
             // 
-            // button2
+            // but1
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(76, 287);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 34);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Read More";
-            this.button2.UseVisualStyleBackColor = false;
+            this.but1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.but1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.but1.Location = new System.Drawing.Point(76, 287);
+            this.but1.Name = "but1";
+            this.but1.Size = new System.Drawing.Size(115, 34);
+            this.but1.TabIndex = 1;
+            this.but1.Text = "Read More";
+            this.but1.UseVisualStyleBackColor = false;
             // 
             // res2
             // 
@@ -250,11 +254,11 @@ namespace Cart_Practic
             // panel3
             // 
             this.panel3.Controls.Add(this.cost2);
-            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.but2);
             this.panel3.Controls.Add(this.res3);
             this.panel3.Controls.Add(this.img2);
             this.panel3.Controls.Add(this.name2);
-            this.panel3.Location = new System.Drawing.Point(483, 3);
+            this.panel3.Location = new System.Drawing.Point(482, 69);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 327);
             this.panel3.TabIndex = 4;
@@ -270,17 +274,17 @@ namespace Cart_Practic
             this.cost2.TabIndex = 3;
             this.cost2.Text = "350 р";
             // 
-            // button3
+            // but2
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(76, 287);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(115, 34);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Read More";
-            this.button3.UseVisualStyleBackColor = false;
+            this.but2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.but2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.but2.Location = new System.Drawing.Point(76, 287);
+            this.but2.Name = "but2";
+            this.but2.Size = new System.Drawing.Size(115, 34);
+            this.but2.TabIndex = 1;
+            this.but2.Text = "Read More";
+            this.but2.UseVisualStyleBackColor = false;
             // 
             // res3
             // 
@@ -314,11 +318,11 @@ namespace Cart_Practic
             // panel4
             // 
             this.panel4.Controls.Add(this.cost7);
-            this.panel4.Controls.Add(this.button4);
+            this.panel4.Controls.Add(this.but7);
             this.panel4.Controls.Add(this.res8);
             this.panel4.Controls.Add(this.img7);
             this.panel4.Controls.Add(this.name7);
-            this.panel4.Location = new System.Drawing.Point(483, 365);
+            this.panel4.Location = new System.Drawing.Point(482, 431);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(200, 327);
             this.panel4.TabIndex = 7;
@@ -334,17 +338,17 @@ namespace Cart_Practic
             this.cost7.TabIndex = 3;
             this.cost7.Text = "350 р";
             // 
-            // button4
+            // but7
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(76, 287);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(115, 34);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Read More";
-            this.button4.UseVisualStyleBackColor = false;
+            this.but7.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.but7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.but7.Location = new System.Drawing.Point(76, 287);
+            this.but7.Name = "but7";
+            this.but7.Size = new System.Drawing.Size(115, 34);
+            this.but7.TabIndex = 1;
+            this.but7.Text = "Read More";
+            this.but7.UseVisualStyleBackColor = false;
             // 
             // res8
             // 
@@ -378,11 +382,11 @@ namespace Cart_Practic
             // panel5
             // 
             this.panel5.Controls.Add(this.cost6);
-            this.panel5.Controls.Add(this.button5);
+            this.panel5.Controls.Add(this.bu6);
             this.panel5.Controls.Add(this.res7);
             this.panel5.Controls.Add(this.img6);
             this.panel5.Controls.Add(this.name6);
-            this.panel5.Location = new System.Drawing.Point(247, 365);
+            this.panel5.Location = new System.Drawing.Point(246, 431);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(200, 327);
             this.panel5.TabIndex = 6;
@@ -398,17 +402,17 @@ namespace Cart_Practic
             this.cost6.TabIndex = 3;
             this.cost6.Text = "350 р";
             // 
-            // button5
+            // bu6
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(76, 287);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(115, 34);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Read More";
-            this.button5.UseVisualStyleBackColor = false;
+            this.bu6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.bu6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bu6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bu6.Location = new System.Drawing.Point(76, 287);
+            this.bu6.Name = "bu6";
+            this.bu6.Size = new System.Drawing.Size(115, 34);
+            this.bu6.TabIndex = 1;
+            this.bu6.Text = "Read More";
+            this.bu6.UseVisualStyleBackColor = false;
             // 
             // res7
             // 
@@ -442,11 +446,11 @@ namespace Cart_Practic
             // panel6
             // 
             this.panel6.Controls.Add(this.cost5);
-            this.panel6.Controls.Add(this.button6);
+            this.panel6.Controls.Add(this.but5);
             this.panel6.Controls.Add(this.res6);
             this.panel6.Controls.Add(this.img5);
             this.panel6.Controls.Add(this.name5);
-            this.panel6.Location = new System.Drawing.Point(13, 365);
+            this.panel6.Location = new System.Drawing.Point(12, 431);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(200, 327);
             this.panel6.TabIndex = 5;
@@ -462,17 +466,17 @@ namespace Cart_Practic
             this.cost5.TabIndex = 3;
             this.cost5.Text = "350 р";
             // 
-            // button6
+            // but5
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(76, 287);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(115, 34);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "Read More";
-            this.button6.UseVisualStyleBackColor = false;
+            this.but5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.but5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.but5.Location = new System.Drawing.Point(76, 287);
+            this.but5.Name = "but5";
+            this.but5.Size = new System.Drawing.Size(115, 34);
+            this.but5.TabIndex = 1;
+            this.but5.Text = "Read More";
+            this.but5.UseVisualStyleBackColor = false;
             // 
             // res6
             // 
@@ -506,11 +510,11 @@ namespace Cart_Practic
             // panel7
             // 
             this.panel7.Controls.Add(this.cost8);
-            this.panel7.Controls.Add(this.button7);
+            this.panel7.Controls.Add(this.but8);
             this.panel7.Controls.Add(this.res9);
             this.panel7.Controls.Add(this.img8);
             this.panel7.Controls.Add(this.name8);
-            this.panel7.Location = new System.Drawing.Point(718, 365);
+            this.panel7.Location = new System.Drawing.Point(717, 431);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(200, 327);
             this.panel7.TabIndex = 8;
@@ -526,17 +530,17 @@ namespace Cart_Practic
             this.cost8.TabIndex = 3;
             this.cost8.Text = "350 р";
             // 
-            // button7
+            // but8
             // 
-            this.button7.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button7.Location = new System.Drawing.Point(76, 287);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(115, 34);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "Read More";
-            this.button7.UseVisualStyleBackColor = false;
+            this.but8.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.but8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.but8.Location = new System.Drawing.Point(76, 287);
+            this.but8.Name = "but8";
+            this.but8.Size = new System.Drawing.Size(115, 34);
+            this.but8.TabIndex = 1;
+            this.but8.Text = "Read More";
+            this.but8.UseVisualStyleBackColor = false;
             // 
             // res9
             // 
@@ -570,11 +574,11 @@ namespace Cart_Practic
             // panel8
             // 
             this.panel8.Controls.Add(this.cost3);
-            this.panel8.Controls.Add(this.button8);
+            this.panel8.Controls.Add(this.but3);
             this.panel8.Controls.Add(this.res4);
             this.panel8.Controls.Add(this.img3);
             this.panel8.Controls.Add(this.name3);
-            this.panel8.Location = new System.Drawing.Point(715, 3);
+            this.panel8.Location = new System.Drawing.Point(714, 69);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(200, 327);
             this.panel8.TabIndex = 9;
@@ -590,17 +594,17 @@ namespace Cart_Practic
             this.cost3.TabIndex = 3;
             this.cost3.Text = "350 р";
             // 
-            // button8
+            // but3
             // 
-            this.button8.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button8.Location = new System.Drawing.Point(76, 287);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(115, 34);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "Read More";
-            this.button8.UseVisualStyleBackColor = false;
+            this.but3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.but3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.but3.Location = new System.Drawing.Point(76, 287);
+            this.but3.Name = "but3";
+            this.but3.Size = new System.Drawing.Size(115, 34);
+            this.but3.TabIndex = 1;
+            this.but3.Text = "Read More";
+            this.but3.UseVisualStyleBackColor = false;
             // 
             // res4
             // 
@@ -634,11 +638,11 @@ namespace Cart_Practic
             // panel9
             // 
             this.panel9.Controls.Add(this.cost9);
-            this.panel9.Controls.Add(this.button9);
+            this.panel9.Controls.Add(this.but9);
             this.panel9.Controls.Add(this.res10);
             this.panel9.Controls.Add(this.img9);
             this.panel9.Controls.Add(this.name9);
-            this.panel9.Location = new System.Drawing.Point(944, 365);
+            this.panel9.Location = new System.Drawing.Point(943, 431);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(200, 327);
             this.panel9.TabIndex = 9;
@@ -654,17 +658,17 @@ namespace Cart_Practic
             this.cost9.TabIndex = 3;
             this.cost9.Text = "350 р";
             // 
-            // button9
+            // but9
             // 
-            this.button9.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button9.Location = new System.Drawing.Point(76, 287);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(115, 34);
-            this.button9.TabIndex = 1;
-            this.button9.Text = "Read More";
-            this.button9.UseVisualStyleBackColor = false;
+            this.but9.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.but9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.but9.Location = new System.Drawing.Point(76, 287);
+            this.but9.Name = "but9";
+            this.but9.Size = new System.Drawing.Size(115, 34);
+            this.but9.TabIndex = 1;
+            this.but9.Text = "Read More";
+            this.but9.UseVisualStyleBackColor = false;
             // 
             // res10
             // 
@@ -698,11 +702,11 @@ namespace Cart_Practic
             // panel10
             // 
             this.panel10.Controls.Add(this.cost4);
-            this.panel10.Controls.Add(this.button10);
+            this.panel10.Controls.Add(this.but4);
             this.panel10.Controls.Add(this.res5);
             this.panel10.Controls.Add(this.img4);
             this.panel10.Controls.Add(this.name4);
-            this.panel10.Location = new System.Drawing.Point(944, 3);
+            this.panel10.Location = new System.Drawing.Point(943, 69);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(200, 327);
             this.panel10.TabIndex = 10;
@@ -718,17 +722,17 @@ namespace Cart_Practic
             this.cost4.TabIndex = 3;
             this.cost4.Text = "350 р";
             // 
-            // button10
+            // but4
             // 
-            this.button10.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button10.Location = new System.Drawing.Point(76, 287);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(115, 34);
-            this.button10.TabIndex = 1;
-            this.button10.Text = "Read More";
-            this.button10.UseVisualStyleBackColor = false;
+            this.but4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.but4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.but4.Location = new System.Drawing.Point(76, 287);
+            this.but4.Name = "but4";
+            this.but4.Size = new System.Drawing.Size(115, 34);
+            this.but4.TabIndex = 1;
+            this.but4.Text = "Read More";
+            this.but4.UseVisualStyleBackColor = false;
             // 
             // res5
             // 
@@ -761,7 +765,7 @@ namespace Cart_Practic
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(1180, 343);
+            this.textBox1.Location = new System.Drawing.Point(1179, 409);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(25, 20);
             this.textBox1.TabIndex = 11;
@@ -775,7 +779,7 @@ namespace Cart_Practic
             this.button14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button14.Image = global::Cart_Practic.Properties.Resources.iconfinder_211686_back_arrow_icon_32px;
             this.button14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button14.Location = new System.Drawing.Point(1172, 374);
+            this.button14.Location = new System.Drawing.Point(1171, 440);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(45, 43);
             this.button14.TabIndex = 16;
@@ -792,7 +796,7 @@ namespace Cart_Practic
             this.button13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button13.Image = global::Cart_Practic.Properties.Resources.iconfinder_211686_back_arrow_icon_32px__1_;
             this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.Location = new System.Drawing.Point(1172, 287);
+            this.button13.Location = new System.Drawing.Point(1171, 353);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(45, 43);
             this.button13.TabIndex = 15;
@@ -809,7 +813,7 @@ namespace Cart_Practic
             this.button12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button12.Image = global::Cart_Practic.Properties.Resources.iconfinder_4829860_arrow_back_left_icon_32px__1_1;
             this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(1172, 248);
+            this.button12.Location = new System.Drawing.Point(1171, 314);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(45, 43);
             this.button12.TabIndex = 14;
@@ -826,7 +830,7 @@ namespace Cart_Practic
             this.button11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button11.Image = global::Cart_Practic.Properties.Resources.iconfinder_4829860_arrow_back_left_icon_32px__2_1;
             this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(1172, 423);
+            this.button11.Location = new System.Drawing.Point(1171, 489);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(45, 43);
             this.button11.TabIndex = 13;
@@ -837,22 +841,64 @@ namespace Cart_Practic
             // table
             // 
             this.table.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.table.BackgroundColor = System.Drawing.Color.White;
             this.table.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.table.Location = new System.Drawing.Point(1172, 23);
+            this.table.Location = new System.Drawing.Point(1171, 89);
             this.table.Name = "table";
             this.table.RowHeadersVisible = false;
             this.table.Size = new System.Drawing.Size(37, 200);
             this.table.TabIndex = 17;
             // 
+            // filtcost
+            // 
+            this.filtcost.AutoSize = true;
+            this.filtcost.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.filtcost.Location = new System.Drawing.Point(15, 6);
+            this.filtcost.Name = "filtcost";
+            this.filtcost.Size = new System.Drawing.Size(52, 21);
+            this.filtcost.TabIndex = 4;
+            this.filtcost.Text = "Цена";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(249, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 21);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Категория";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(19, 39);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 22;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(253, 39);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 23;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
             // dishes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.filtcost);
             this.Controls.Add(this.table);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.button13);
@@ -870,7 +916,7 @@ namespace Cart_Practic
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "dishes";
-            this.Size = new System.Drawing.Size(1232, 695);
+            this.Size = new System.Drawing.Size(1232, 767);
             this.Load += new System.EventHandler(this.dishes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -912,61 +958,61 @@ namespace Cart_Practic
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label cost0;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button but0;
         private System.Windows.Forms.Label res1;
         private System.Windows.Forms.PictureBox img0;
         private System.Windows.Forms.Label name0;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label cost1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button but1;
         private System.Windows.Forms.Label res2;
         private System.Windows.Forms.PictureBox img1;
         private System.Windows.Forms.Label name1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label cost2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button but2;
         private System.Windows.Forms.Label res3;
         private System.Windows.Forms.PictureBox img2;
         private System.Windows.Forms.Label name2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label cost7;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button but7;
         private System.Windows.Forms.Label res8;
         private System.Windows.Forms.PictureBox img7;
         private System.Windows.Forms.Label name7;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label cost6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button bu6;
         private System.Windows.Forms.Label res7;
         private System.Windows.Forms.PictureBox img6;
         private System.Windows.Forms.Label name6;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label cost5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button but5;
         private System.Windows.Forms.Label res6;
         private System.Windows.Forms.PictureBox img5;
         private System.Windows.Forms.Label name5;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label cost8;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button but8;
         private System.Windows.Forms.Label res9;
         private System.Windows.Forms.PictureBox img8;
         private System.Windows.Forms.Label name8;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label cost3;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button but3;
         private System.Windows.Forms.Label res4;
         private System.Windows.Forms.PictureBox img3;
         private System.Windows.Forms.Label name3;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label cost9;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button but9;
         private System.Windows.Forms.Label res10;
         private System.Windows.Forms.PictureBox img9;
         private System.Windows.Forms.Label name9;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label cost4;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button but4;
         private System.Windows.Forms.Label res5;
         private System.Windows.Forms.PictureBox img4;
         private System.Windows.Forms.Label name4;
@@ -976,5 +1022,9 @@ namespace Cart_Practic
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.DataGridView table;
+        private System.Windows.Forms.Label filtcost;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

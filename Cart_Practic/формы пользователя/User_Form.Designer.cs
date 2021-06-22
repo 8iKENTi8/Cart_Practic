@@ -39,11 +39,11 @@ namespace Cart_Practic
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.uScab1 = new Cart_Practic.UScab();
             this.resta1 = new Cart_Practic.resta();
             this.dishes1 = new Cart_Practic.dishes();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -61,7 +61,7 @@ namespace Cart_Practic
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(223, 756);
+            this.panel1.Size = new System.Drawing.Size(223, 804);
             this.panel1.TabIndex = 3;
             // 
             // button4
@@ -164,34 +164,6 @@ namespace Cart_Practic
             this.panel2.Size = new System.Drawing.Size(1233, 29);
             this.panel2.TabIndex = 4;
             // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 25;
-            this.bunifuElipse2.TargetControl = this;
-            // 
-            // uScab1
-            // 
-            this.uScab1.Location = new System.Drawing.Point(223, 30);
-            this.uScab1.Name = "uScab1";
-            this.uScab1.Size = new System.Drawing.Size(1233, 696);
-            this.uScab1.TabIndex = 7;
-            this.uScab1.Load += new System.EventHandler(this.uScab1_Load);
-            // 
-            // resta1
-            // 
-            this.resta1.Location = new System.Drawing.Point(228, 30);
-            this.resta1.Name = "resta1";
-            this.resta1.Size = new System.Drawing.Size(1233, 683);
-            this.resta1.TabIndex = 6;
-            this.resta1.Load += new System.EventHandler(this.resta1_Load);
-            // 
-            // dishes1
-            // 
-            this.dishes1.Location = new System.Drawing.Point(223, 30);
-            this.dishes1.Name = "dishes1";
-            this.dishes1.Size = new System.Drawing.Size(1233, 726);
-            this.dishes1.TabIndex = 5;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -204,11 +176,39 @@ namespace Cart_Practic
             this.label8.Text = "x";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 25;
+            this.bunifuElipse2.TargetControl = this;
+            // 
+            // uScab1
+            // 
+            this.uScab1.Location = new System.Drawing.Point(223, 30);
+            this.uScab1.Name = "uScab1";
+            this.uScab1.Size = new System.Drawing.Size(1233, 821);
+            this.uScab1.TabIndex = 7;
+            this.uScab1.Load += new System.EventHandler(this.uScab1_Load);
+            // 
+            // resta1
+            // 
+            this.resta1.Location = new System.Drawing.Point(228, 30);
+            this.resta1.Name = "resta1";
+            this.resta1.Size = new System.Drawing.Size(1233, 824);
+            this.resta1.TabIndex = 6;
+            this.resta1.Load += new System.EventHandler(this.resta1_Load);
+            // 
+            // dishes1
+            // 
+            this.dishes1.Location = new System.Drawing.Point(223, 30);
+            this.dishes1.Name = "dishes1";
+            this.dishes1.Size = new System.Drawing.Size(1233, 824);
+            this.dishes1.TabIndex = 5;
+            // 
             // User_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1456, 756);
+            this.ClientSize = new System.Drawing.Size(1456, 804);
             this.Controls.Add(this.uScab1);
             this.Controls.Add(this.resta1);
             this.Controls.Add(this.dishes1);

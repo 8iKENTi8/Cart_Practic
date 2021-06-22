@@ -29,8 +29,8 @@ namespace Cart_Practic
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -87,6 +87,7 @@ namespace Cart_Practic
             this.button1.TabIndex = 41;
             this.button1.Text = "Изменить";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label8
             // 
@@ -121,7 +122,7 @@ namespace Cart_Practic
             // maskedTextBox2
             // 
             this.maskedTextBox2.Location = new System.Drawing.Point(113, 84);
-            this.maskedTextBox2.Mask = "00-00-00";
+            this.maskedTextBox2.Mask = "00:00:00";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(140, 20);
             this.maskedTextBox2.TabIndex = 36;
@@ -130,7 +131,7 @@ namespace Cart_Practic
             // maskedTextBox1
             // 
             this.maskedTextBox1.Location = new System.Drawing.Point(113, 58);
-            this.maskedTextBox1.Mask = "00-00-00";
+            this.maskedTextBox1.Mask = "00:00:00";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(140, 20);
             this.maskedTextBox1.TabIndex = 35;
@@ -190,8 +191,8 @@ namespace Cart_Practic
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -201,13 +202,14 @@ namespace Cart_Practic
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(253, 230);
             this.dataGridView1.TabIndex = 29;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // table
             // 
             this.table.AllowUserToAddRows = false;
             this.table.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.table.BackgroundColor = System.Drawing.Color.White;
             this.table.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -217,6 +219,7 @@ namespace Cart_Practic
             this.table.RowHeadersVisible = false;
             this.table.Size = new System.Drawing.Size(261, 230);
             this.table.TabIndex = 28;
+            this.table.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellClick);
             this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick);
             // 
             // comboBox1
