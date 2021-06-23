@@ -66,6 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cart_dish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cart_dish.Designer.cs">
+      <DependentUpon>Cart_dish.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class_up_dish.cs" />
     <Compile Include="формы пользователя\UScab.cs">
       <SubType>UserControl</SubType>
@@ -178,6 +184,9 @@
     <Compile Include="формы админа\users.Designer.cs">
       <DependentUpon>users.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Cart_dish.resx">
+      <DependentUpon>Cart_dish.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="формы пользователя\UScab.resx">
       <DependentUpon>UScab.cs</DependentUpon>
     </EmbeddedResource>

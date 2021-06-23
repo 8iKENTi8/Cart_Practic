@@ -53,9 +53,11 @@ namespace Cart_Practic
 
         List<Control> list_names = new List<Control>();
         List<Control> list_cost = new List<Control>();
-        List<Control> list_res = new List<Control>();
         List<PictureBox> list_img = new List<PictureBox>();
         List<Button> list_btn = new List<Button>();
+        List<Control> list_tm = new List<Control>();
+        List<Control> btn_tm = new List<Control>();
+
 
 
 
@@ -120,7 +122,25 @@ namespace Cart_Practic
                     Class_up_dish.img[i] = Class_up_dish.img1[i];
             }
 
+            //Время
+            for (int i = 0; i < count; i++)
+            {
+                list_tm[i].Text = table[6, i].Value.ToString() + "-"+ table[7, i].Value.ToString();
+                Class_up_dish.tm[i] = table[6, i].Value.ToString() + "-" + table[7, i].Value.ToString();
+                btn_tm[i].Visible = true;
+            }
 
+            for (int i = 0; i < 10; i++)
+            {
+                if (Class_up_dish.tm[i] == Class_up_dish.tm1[i])
+                {
+                    list_tm[i].Text = "";
+                    btn_tm[i].Text = "";
+                    Class_up_dish.tm[i] = Class_up_dish.tm1[i];
+                }
+                else
+                    Class_up_dish.tm[i] = Class_up_dish.tm1[i];
+            }
         }
 
         //добавление элементов в list
@@ -147,17 +167,25 @@ namespace Cart_Practic
             list_img.Add(img6); list_img.Add(img7);
             list_img.Add(img8); list_img.Add(img9);
 
-            list_res.Add(res1); list_res.Add(res2);
-            list_res.Add(res3); list_res.Add(res4);
-            list_res.Add(res5); list_res.Add(res6);
-            list_res.Add(res7); list_res.Add(res8);
-            list_res.Add(res9); list_res.Add(res10);
+          
 
             list_btn.Add(but0); list_btn.Add(but1);
             list_btn.Add(but2); list_btn.Add(but3);
             list_btn.Add(but4); list_btn.Add(but5);
             list_btn.Add(but6); list_btn.Add(but7);
             list_btn.Add(but8); list_btn.Add(but9);
+
+            list_tm.Add(tm0); list_tm.Add(tm1);
+            list_tm.Add(tm2); list_tm.Add(tm3);
+            list_tm.Add(tm4); list_tm.Add(tm5);
+            list_tm.Add(tm6); list_tm.Add(tm7);
+            list_tm.Add(tm8); list_tm.Add(tm9);
+
+            btn_tm.Add(tb0); btn_tm.Add(tb1);
+            btn_tm.Add(tb2); btn_tm.Add(tb3);
+            btn_tm.Add(tb4); btn_tm.Add(tb5);
+            btn_tm.Add(tb6); btn_tm.Add(tb7);
+            btn_tm.Add(tb8); btn_tm.Add(tb9);
         }
 
         // Кол-во страниц
@@ -195,6 +223,9 @@ namespace Cart_Practic
 
             table.Visible = false;
 
+            textBox1.Text = check.ToString();
+
+            check = 1;
             textBox1.Text = check.ToString();
 
 
@@ -263,6 +294,7 @@ namespace Cart_Practic
 
             outputData(count);
         }
+
 
         private void button12_Click(object sender, EventArgs e)
         {
@@ -419,6 +451,7 @@ namespace Cart_Practic
 
         }
 
+        //Поиск
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13)
@@ -437,5 +470,97 @@ namespace Cart_Practic
             }
 
             }
+
+
+        private void but0_Click(object sender, EventArgs e)
+        {
+            Class_up_dish.id = table[0, 0].Value.ToString();
+            
+            Cart_dish form = new Cart_dish();
+            form.Show();
+            form.Load1();
+
+        }
+
+        private void but1_Click(object sender, EventArgs e)
+        {
+            Class_up_dish.id = table[0, 1].Value.ToString();
+
+            Cart_dish form = new Cart_dish();
+            form.Show();
+            form.Load1();
+        }
+
+        private void but2_Click(object sender, EventArgs e)
+        {
+            Class_up_dish.id = table[0, 2].Value.ToString();
+
+            Cart_dish form = new Cart_dish();
+            form.Show();
+            form.Load1();
+        }
+
+        private void but3_Click(object sender, EventArgs e)
+        {
+            Class_up_dish.id = table[0, 3].Value.ToString();
+
+            Cart_dish form = new Cart_dish();
+            form.Show();
+            form.Load1();
+        }
+
+        private void but4_Click(object sender, EventArgs e)
+        {
+            Class_up_dish.id = table[0, 4].Value.ToString();
+
+            Cart_dish form = new Cart_dish();
+            form.Show();
+            form.Load1();
+        }
+
+        private void but5_Click(object sender, EventArgs e)
+        {
+            Class_up_dish.id = table[0, 5].Value.ToString();
+
+            Cart_dish form = new Cart_dish();
+            form.Show();
+            form.Load1();
+        }
+
+        private void but6_Click(object sender, EventArgs e)
+        {
+            Class_up_dish.id = table[0, 6].Value.ToString();
+
+            Cart_dish form = new Cart_dish();
+            form.Show();
+            form.Load1();
+        }
+
+        private void but7_Click(object sender, EventArgs e)
+        {
+            Class_up_dish.id = table[0, 7].Value.ToString();
+
+            Cart_dish form = new Cart_dish();
+            form.Show();
+            form.Load1();
+        }
+
+        private void but8_Click(object sender, EventArgs e)
+        {
+            Class_up_dish.id = table[0, 8].Value.ToString();
+
+            Cart_dish form = new Cart_dish();
+            form.Show();
+            form.Load1();
+        }
+
+        private void but9_Click(object sender, EventArgs e)
+        {
+            Class_up_dish.id = table[0, 9].Value.ToString();
+
+            Cart_dish form = new Cart_dish();
+            form.Show();
+            form.Load1();
+        }
     }
 }

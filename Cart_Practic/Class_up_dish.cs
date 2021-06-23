@@ -20,6 +20,8 @@ namespace Cart_Practic
 
         static public string[] img = new string[10];
         static public string[] img1 = new string[10];
+        static public string[] tm = new string[10];
+        static public string[] tm1 = new string[10];
 
         static public bool roleId(string role)
         {
