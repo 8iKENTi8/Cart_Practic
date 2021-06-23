@@ -21,10 +21,12 @@ namespace Cart_Practic
             comboBox1.Items.Add("По умолчанию");
             comboBox1.Items.Add("По возрастанию");
             comboBox1.Items.Add("По Убыванию");
+          
 
             comboBox2.Text = "По умолчанию";
             comboBox2.Items.Add("По умолчанию");
-
+           
+            Class_up_dish.com= "CALL `get_dish`(@p0); ";
             DB dB = new DB();
 
             DataTable tab = new DataTable();
@@ -256,10 +258,17 @@ namespace Cart_Practic
             outputData(count);
         }
 
-        private void dishes_Load(object sender, EventArgs e)
+        public void load1()
         {
             Class_up_dish.com = "CALL `get_dish`(@p0); ";
             PoYml(Class_up_dish.com);
+            comboBox1.Text = "По умолчанию";
+            comboBox2.Text = "По умолчанию";
+
+        }
+        private void dishes_Load(object sender, EventArgs e)
+        {
+            load1();
 
         }
 
@@ -393,23 +402,67 @@ namespace Cart_Practic
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Convert.ToString( comboBox1.SelectedItem )== "По умолчанию")
+             if (Convert.ToString(comboBox1.SelectedItem) == "По умолчанию" && comboBox2.SelectedItem == null)
             {
                 Class_up_dish.com = "CALL `get_dish`(@p0);";
                 PoYml(Class_up_dish.com);
             }
+           else if (Convert.ToString( comboBox1.SelectedItem )== "По умолчанию" && Convert.ToString(comboBox2.SelectedItem) == "По умолчанию")
+            {
+                Class_up_dish.com = "CALL `get_dish`(@p0);";
+                PoYml(Class_up_dish.com);
+            }
+             else if (Convert.ToString(comboBox1.SelectedItem) == "По умолчанию" && Convert.ToString(comboBox2.SelectedItem) != "По умолчанию")
+            {
+                getIdCat(comboBox2.SelectedItem.ToString());
+                Class_up_dish.com = $"CALL `get_dish_cat`(@p0, {Class_up_dish.id_cat});";
+                PoYml(Class_up_dish.com);
+            }
 
-            if (Convert.ToString(comboBox1.SelectedItem) == "По возрастанию")
+
+             if (Convert.ToString(comboBox1.SelectedItem) == "По возрастанию" && comboBox2.SelectedItem == null)
             {
                 Class_up_dish.com = "CALL `get_dish_up`(@p0);";
                 PoYml(Class_up_dish.com);
             }
-
-            if (Convert.ToString(comboBox1.SelectedItem) == "По Убыванию")
+           else if (Convert.ToString(comboBox1.SelectedItem) == "По возрастанию" && Convert.ToString(comboBox2.SelectedItem) != "По умолчанию")
             {
-                Class_up_dish.com = "CALL `get_dish_down`(@p0);";
+                getIdCat(comboBox2.SelectedItem.ToString());
+
+                Class_up_dish.com = $"CALL `get_dish_cat_up`(@p0, {Class_up_dish.id_cat});";
+
                 PoYml(Class_up_dish.com);
             }
+
+             if (Convert.ToString(comboBox1.SelectedItem) == "По Убыванию" && comboBox2.SelectedItem == null)
+            {
+
+                Class_up_dish.com = $"CALL `get_dish_down`(@p0);";
+
+                PoYml(Class_up_dish.com);
+            }
+           else if (Convert.ToString(comboBox1.SelectedItem) == "По Убыванию" && Convert.ToString(comboBox2.SelectedItem) != "По умолчанию")
+            {
+                getIdCat(comboBox2.SelectedItem.ToString());
+                Class_up_dish.com = $"CALL `get_dish_cat_down`(@p0,{Class_up_dish.id_cat});";
+                PoYml(Class_up_dish.com);
+            }
+          
+            else if (Convert.ToString(comboBox1.SelectedItem) == "По Убыванию" && Convert.ToString(comboBox2.SelectedItem) == "По умолчанию")
+            {
+
+                Class_up_dish.com = $"CALL `get_dish_down`(@p0);";
+
+                PoYml(Class_up_dish.com);
+            }
+            else if (Convert.ToString(comboBox1.SelectedItem) == "По возрастанию" && Convert.ToString(comboBox2.SelectedItem) == "По умолчанию")
+            {
+
+                Class_up_dish.com = $"CALL `get_dish_up`(@p0);";
+
+                PoYml(Class_up_dish.com);
+            }
+
 
         }
 
@@ -435,7 +488,27 @@ namespace Cart_Practic
         }
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Convert.ToString(comboBox2.SelectedItem) != "По умолчанию")
+            if(Convert.ToString(comboBox2.SelectedItem) != "По умолчанию" 
+                && Convert.ToString(comboBox1.SelectedItem) == "По возрастанию")
+            {
+                getIdCat(comboBox2.SelectedItem.ToString());
+
+                Class_up_dish.com = $"CALL `get_dish_cat_up`(@p0, {Class_up_dish.id_cat});";
+
+                PoYml(Class_up_dish.com);
+            }
+
+            else if(Convert.ToString(comboBox2.SelectedItem) != "По умолчанию"
+                && Convert.ToString(comboBox1.SelectedItem) == "По Убыванию")
+            {
+                getIdCat(comboBox2.SelectedItem.ToString());
+
+                Class_up_dish.com = $"CALL `get_dish_cat_down`(@p0, {Class_up_dish.id_cat});";
+
+                PoYml(Class_up_dish.com);
+            }
+
+           else if (Convert.ToString(comboBox2.SelectedItem) != "По умолчанию")
             {
                 getIdCat(comboBox2.SelectedItem.ToString());
 
@@ -443,9 +516,20 @@ namespace Cart_Practic
 
                 PoYml(Class_up_dish.com);
             }
-            else
+
+            else if(Convert.ToString(comboBox2.SelectedItem) == "По умолчанию"&&Convert.ToString(comboBox1.SelectedItem) == "По умолчанию")
             {
                 Class_up_dish.com = "CALL `get_dish`(@p0);";
+                PoYml(Class_up_dish.com);
+            }
+            else if(Convert.ToString(comboBox2.SelectedItem) == "По умолчанию" && Convert.ToString(comboBox1.SelectedItem) == "По возрастанию")
+            {
+                Class_up_dish.com = "CALL `get_dish_up`(@p0);";
+                PoYml(Class_up_dish.com);
+            }
+            else
+            {
+                Class_up_dish.com = "CALL `get_dish_down`(@p0);";
                 PoYml(Class_up_dish.com);
             }
 
@@ -458,14 +542,15 @@ namespace Cart_Practic
             {
                 if (txtSearch.Text != "")
                 {
-                    Class_up_dish.com = $"CALL `get_dish_search`(@p0, '{txtSearch.Text}');";
+                    Class_up_dish.com1 = $"CALL `get_dish_search`(@p0, '{txtSearch.Text}');";
 
-                    PoYml(Class_up_dish.com);
+                    PoYml(Class_up_dish.com1);
                 }
                 else
                 {
-                    Class_up_dish.com = "CALL `get_dish`(@p0);";
+                    
                     PoYml(Class_up_dish.com);
+                   
                 }
             }
 

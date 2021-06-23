@@ -61,7 +61,7 @@ namespace Cart_Practic
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(223, 804);
+            this.panel1.Size = new System.Drawing.Size(222, 804);
             this.panel1.TabIndex = 3;
             // 
             // button4
@@ -159,9 +159,9 @@ namespace Cart_Practic
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
             this.panel2.Controls.Add(this.label8);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(223, 0);
+            this.panel2.Location = new System.Drawing.Point(222, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1233, 29);
+            this.panel2.Size = new System.Drawing.Size(1234, 29);
             this.panel2.TabIndex = 4;
             // 
             // label8
@@ -183,25 +183,25 @@ namespace Cart_Practic
             // 
             // uScab1
             // 
-            this.uScab1.Location = new System.Drawing.Point(223, 30);
+            this.uScab1.Location = new System.Drawing.Point(221, 29);
             this.uScab1.Name = "uScab1";
-            this.uScab1.Size = new System.Drawing.Size(1233, 821);
+            this.uScab1.Size = new System.Drawing.Size(1235, 821);
             this.uScab1.TabIndex = 7;
             this.uScab1.Load += new System.EventHandler(this.uScab1_Load);
             // 
             // resta1
             // 
-            this.resta1.Location = new System.Drawing.Point(228, 30);
+            this.resta1.Location = new System.Drawing.Point(223, 29);
             this.resta1.Name = "resta1";
-            this.resta1.Size = new System.Drawing.Size(1233, 824);
+            this.resta1.Size = new System.Drawing.Size(1238, 824);
             this.resta1.TabIndex = 6;
             this.resta1.Load += new System.EventHandler(this.resta1_Load);
             // 
             // dishes1
             // 
-            this.dishes1.Location = new System.Drawing.Point(223, 30);
+            this.dishes1.Location = new System.Drawing.Point(224, 30);
             this.dishes1.Name = "dishes1";
-            this.dishes1.Size = new System.Drawing.Size(1233, 824);
+            this.dishes1.Size = new System.Drawing.Size(1234, 824);
             this.dishes1.TabIndex = 5;
             // 
             // User_Form

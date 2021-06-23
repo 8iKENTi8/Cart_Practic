@@ -47,6 +47,7 @@ namespace Cart_Practic
 
             tab1 = new DataTable();
 
+           
             command =
                 new MySqlCommand("SELECT `restaurants`.`name`,`restaurant_addresses`.`place` " +
                 "FROM `dishes`,`restaurants`,`restaurant_addresses` WHERE " +
@@ -63,7 +64,20 @@ namespace Cart_Practic
             table.DataSource = tab1;
 
             label11.Text = table[0, 0].Value.ToString();
-            label12.Text = table[1, 0].Value.ToString();
+            int count1 = table.Columns.Count - 1;
+
+            if(count1==1)
+                for (int i = 0; i < count1; i++)
+                {
+                    label12.Text = table[1, i].Value.ToString();
+                }
+            else
+                for (int i = 0; i < count1; i++)
+                {
+                    label12.Text = table[1, i].Value.ToString()+", ";
+                }
+
+
 
         }
 

@@ -41,6 +41,7 @@ namespace Cart_Practic
                 " AS 'Средний чек', `restaurants`.`beg_time` AS 'Открытие ресторана'," +
                 " `restaurants`.`end_time` AS 'Закрытие ресторана'," +
                 " `restaurants`.`description` AS 'Описание', " +
+                "`restaurants`.`img` AS 'Изображение'," +
                 "'Update','Delete' FROM `restaurants`", dB.getConnection());
 
             adapter.SelectCommand = command;
@@ -54,17 +55,17 @@ namespace Cart_Practic
             {
                 DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
 
-                table[6, i] = linkCell;
+                table[7, i] = linkCell;
 
-                table[6, i].Style.BackColor = Color.FromArgb(46, 169, 79);
+                table[7, i].Style.BackColor = Color.FromArgb(46, 169, 79);
             }
 
             for (int i = 0; i < table.Rows.Count; i++)
             {
                 DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
 
-                table[7, i] = linkCell;
-                table[7, i].Style.BackColor = Color.Tomato;
+                table[8, i] = linkCell;
+                table[8, i].Style.BackColor = Color.Tomato;
             }
 
 
@@ -74,9 +75,9 @@ namespace Cart_Practic
         {
             try
             {
-                if (e.ColumnIndex == 6)
+                if (e.ColumnIndex == 7)
                 {
-                    string task = table.Rows[e.RowIndex].Cells[6].Value.ToString();
+                    string task = table.Rows[e.RowIndex].Cells[7].Value.ToString();
                     if (task == "Update")
                     {
                         if (MessageBox.Show("Обновить эту строку",
@@ -89,7 +90,7 @@ namespace Cart_Practic
                             MySqlCommand command = new MySqlCommand("UPDATE `restaurants` SET " +
                                 "`restaurant_id` = @ul, " +
                                 "`name` = @lg, `average_check` = @ps, " +
-                                "`beg_time` = @em, `end_time` = @em1, `description` = @em2" +
+                                "`beg_time` = @em, `end_time` = @em1, `description` = @em2, `img`=@em3" +
                                 " WHERE `restaurants`.`restaurant_id` = @ul", db.getConnection());
 
                             command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
@@ -98,6 +99,7 @@ namespace Cart_Practic
                             command.Parameters.Add("@em", MySqlDbType.VarChar).Value = table[3, rowIndex].Value.ToString();
                             command.Parameters.Add("@em1", MySqlDbType.VarChar).Value = table[4, rowIndex].Value.ToString();
                             command.Parameters.Add("@em2", MySqlDbType.VarChar).Value = table[5, rowIndex].Value.ToString();
+                            command.Parameters.Add("@em3", MySqlDbType.VarChar).Value = table[6, rowIndex].Value.ToString();
 
                             db.openConnection();
                             if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Ресторан был обновлен"); }
@@ -116,9 +118,9 @@ namespace Cart_Practic
 
             try
             {
-                if (e.ColumnIndex == 7)
+                if (e.ColumnIndex == 8)
                 {
-                    string task = table.Rows[e.RowIndex].Cells[7].Value.ToString();
+                    string task = table.Rows[e.RowIndex].Cells[8].Value.ToString();
                     if (task == "Delete")
                     {
                         if (MessageBox.Show("Удалить эту строку",
@@ -147,9 +149,9 @@ namespace Cart_Practic
 
                         DB db = new DB();
                         MySqlCommand command = new MySqlCommand("INSERT INTO `restaurants`" +
-                            "(`restaurant_id`, `name`, `average_check`, `beg_time`, `end_time`, `description`) " +
+                            "(`restaurant_id`, `name`, `average_check`, `beg_time`, `end_time`, `description`,`img`) " +
                             "VALUES (@ul, @lg, @ps, @em, " +
-                            "@em1, @em2)", db.getConnection());
+                            "@em1, @em2,@em3)", db.getConnection());
 
                         command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
                         command.Parameters.Add("@lg", MySqlDbType.VarChar).Value = table[1, rowIndex].Value.ToString();
@@ -157,10 +159,11 @@ namespace Cart_Practic
                         command.Parameters.Add("@em", MySqlDbType.VarChar).Value = table[3, rowIndex].Value.ToString();
                         command.Parameters.Add("@em1", MySqlDbType.VarChar).Value = table[4, rowIndex].Value.ToString();
                         command.Parameters.Add("@em2", MySqlDbType.VarChar).Value = table[5, rowIndex].Value.ToString();
+                        command.Parameters.Add("@em3", MySqlDbType.VarChar).Value = table[6, rowIndex].Value.ToString();
 
                         table.Rows.RemoveAt(rowIndex);
 
-                        table.Rows[e.RowIndex].Cells[7].Value = "Delete";
+                        table.Rows[e.RowIndex].Cells[8].Value = "Delete";
 
                         db.openConnection();
                         if (command.ExecuteNonQuery() == 1) { MessageBox.Show("ресторан был добавлен"); }
@@ -210,10 +213,10 @@ namespace Cart_Practic
 
                     DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
 
-                    table[7, lastRow] = linkCell;
+                    table[8, lastRow] = linkCell;
 
                     row.Cells["Delete"].Value = "Insert";
-                    table[7, lastRow].Style.BackColor = Color.Tomato;
+                    table[8, lastRow].Style.BackColor = Color.Tomato;
                 }
             }
             catch (Exception ex)
@@ -235,16 +238,16 @@ namespace Cart_Practic
                 {
                     DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
 
-                    table[6, i] = linkCell;
-                    table[6, i].Style.BackColor = Color.FromArgb(46, 169, 79);
+                    table[7, i] = linkCell;
+                    table[7, i].Style.BackColor = Color.FromArgb(46, 169, 79);
                 }
 
                 for (int i = 0; i < table.Rows.Count; i++)
                 {
                     DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
 
-                    table[7, i] = linkCell;
-                    table[7, i].Style.BackColor = Color.Tomato;
+                    table[8, i] = linkCell;
+                    table[8, i].Style.BackColor = Color.Tomato;
                 }
             }
 
@@ -254,16 +257,16 @@ namespace Cart_Practic
                 {
                     DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
 
-                    table[6, i] = linkCell;
-                    table[6, i].Style.BackColor = Color.FromArgb(46, 169, 79);
+                    table[7, i] = linkCell;
+                    table[7, i].Style.BackColor = Color.FromArgb(46, 169, 79);
                 }
 
                 for (int i = 0; i < table.Rows.Count; i++)
                 {
                     DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
 
-                    table[7, i] = linkCell;
-                    table[7, i].Style.BackColor = Color.Tomato;
+                    table[8, i] = linkCell;
+                    table[8, i].Style.BackColor = Color.Tomato;
                 }
             }
            }
