@@ -35,6 +35,7 @@ namespace Cart_Practic
             panel3.Height = button3.Height;
             panel3.Top = button3.Top;
             uScab1.BringToFront();
+            uScab1.load1();
 
         }
 
@@ -67,7 +68,22 @@ namespace Cart_Practic
 
         private void label8_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Вы уверены что хотите закрыть приложение",
+                            "Закрытие приложения", MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        public void MEnuRes()
+        {
+
+            panel3.Height = button1.Height;
+            panel3.Top = button1.Top;
+            dishes1.BringToFront();
+            dishes1.load2();
+
         }
     }
 }

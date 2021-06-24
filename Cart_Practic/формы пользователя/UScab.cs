@@ -17,8 +17,14 @@ namespace Cart_Practic
         {
             InitializeComponent();
 
-            label1.Text = Class_up_dish.id;
-            email.Text = Class_up_dish.id_ingr;
+            label1.Text = Class_up_dish.id1;
+            email.Text = Class_up_dish.id2;
+        }
+
+        public void load1()
+        {
+            label1.Text = Class_up_dish.id1;
+            email.Text = Class_up_dish.id2;
         }
 
         public bool true_pass()

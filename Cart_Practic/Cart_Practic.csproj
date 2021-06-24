@@ -66,11 +66,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cart_dish.cs">
+    <Compile Include="формы пользователя\Cart_dish.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cart_dish.Designer.cs">
+    <Compile Include="формы пользователя\Cart_dish.Designer.cs">
       <DependentUpon>Cart_dish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cart_res.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cart_res.Designer.cs">
+      <DependentUpon>Cart_res.cs</DependentUpon>
     </Compile>
     <Compile Include="Class_up_dish.cs" />
     <Compile Include="формы пользователя\UScab.cs">
@@ -166,12 +172,6 @@
     <Compile Include="Sign_Up.Designer.cs">
       <DependentUpon>Sign_Up.cs</DependentUpon>
     </Compile>
-    <Compile Include="формы пользователя\Tab_rest.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="формы пользователя\Tab_rest.Designer.cs">
-      <DependentUpon>Tab_rest.cs</DependentUpon>
-    </Compile>
     <Compile Include="формы пользователя\User_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,7 +184,10 @@
     <Compile Include="формы админа\users.Designer.cs">
       <DependentUpon>users.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Cart_dish.resx">
+    <EmbeddedResource Include="Cart_res.resx">
+      <DependentUpon>Cart_res.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="формы пользователя\Cart_dish.resx">
       <DependentUpon>Cart_dish.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="формы пользователя\UScab.resx">
@@ -241,9 +244,6 @@
     </Compile>
     <EmbeddedResource Include="Sign_Up.resx">
       <DependentUpon>Sign_Up.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="формы пользователя\Tab_rest.resx">
-      <DependentUpon>Tab_rest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="формы пользователя\User_Form.resx">
       <DependentUpon>User_Form.cs</DependentUpon>

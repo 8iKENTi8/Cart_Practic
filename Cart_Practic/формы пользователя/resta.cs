@@ -20,6 +20,13 @@ namespace Cart_Practic
 
             comboBox1.Text = "По умолчанию";
             comboBox1.Items.Add("По умолчанию");
+            comboBox1.Items.Add("С 7 утра");
+            comboBox1.Items.Add("С 8 утра");
+            comboBox1.Items.Add("С 9 утра");
+            comboBox1.Items.Add("До 9 вечера");
+            comboBox1.Items.Add("До 10 вечера");
+            comboBox1.Items.Add("До 11 вечера");
+
 
 
 
@@ -365,32 +372,342 @@ namespace Cart_Practic
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string str, str2;
+            if (comboBox2.SelectedItem == null)
+            {
+                str = comboBox1.SelectedItem.ToString(); str2 = "";
+            }
+            else
+            {
+                if(comboBox1.SelectedItem == null)
+                {
+                    str = ""; str2 = comboBox2.SelectedItem.ToString();
+                }
+
+                else
+                {
+                    str = comboBox1.SelectedItem.ToString(); str2 = comboBox2.SelectedItem.ToString();
+                }
+            }
+
             if (Convert.ToString(comboBox2.SelectedItem) == "По умолчанию" && (comboBox1.SelectedItem == null || Convert.ToString(comboBox1.SelectedItem) == "По умолчанию"))
             {
                 Class_up_dish.com = "CALL `get_rest`(@p0);";
                 PoYml(Class_up_dish.com);
             }
-            else if (Convert.ToString(comboBox2.SelectedItem) == "Дорогой" && (Convert.ToString(comboBox1.SelectedItem) == "По умолчанию" || comboBox1.SelectedItem==null))
+            else if ((comboBox1.SelectedItem != null || Convert.ToString(comboBox1.SelectedItem) != "По умолчанию") && (comboBox2.SelectedItem == null || Convert.ToString(comboBox2.SelectedItem) == "По умолчанию"))
+            {
+
+                Ifcon(str, str2);
+            }
+            else if ((comboBox1.SelectedItem != null || Convert.ToString(comboBox1.SelectedItem) != "По умолчанию") && (comboBox2.SelectedItem != null || Convert.ToString(comboBox2.SelectedItem) != "По умолчанию"))
+            {
+                Ifcon(str, str2);
+            }
+             if (Convert.ToString(comboBox2.SelectedItem) == "Дорогой" && (Convert.ToString(comboBox1.SelectedItem) == "По умолчанию" || comboBox1.SelectedItem == null))
             {
                 Class_up_dish.com = "CALL `get_res_dorog`(@p0);";
                 PoYml(Class_up_dish.com);
             }
-            else if (Convert.ToString(comboBox2.SelectedItem) == "Обычный" && (Convert.ToString(comboBox1.SelectedItem) == "По умолчанию" || comboBox1.SelectedItem == null))
+
+             if (Convert.ToString(comboBox2.SelectedItem) == "Обычный" && (Convert.ToString(comboBox1.SelectedItem) == "По умолчанию" || comboBox1.SelectedItem == null))
             {
                 Class_up_dish.com = "CALL `get_res_simple`(@p0);";
                 PoYml(Class_up_dish.com);
             }
-            else if (Convert.ToString(comboBox2.SelectedItem) == "Не дорогой" && (Convert.ToString(comboBox1.SelectedItem) == "По умолчанию" || comboBox1.SelectedItem == null))
+             if (Convert.ToString(comboBox2.SelectedItem) == "Не дорогой" && (Convert.ToString(comboBox1.SelectedItem) == "По умолчанию" || comboBox1.SelectedItem == null))
             {
                 Class_up_dish.com = "CALL `get_res_cheap`(@p0);";
+                PoYml(Class_up_dish.com);
+            }
+            else
+            {
+                
+                if((comboBox2.SelectedItem == null || Convert.ToString(comboBox2.SelectedItem) == "По умолчанию") && str.Contains("С"))
+                {
+                    if(str.Contains('9'))
+                    {
+                        Class_up_dish.com = "CALL `ger_res_time_begin`(@p0, 9);";
+                    }
+                    if (str.Contains('8'))
+                    {
+                        Class_up_dish.com = "CALL `ger_res_time_begin`(@p0, 8);";
+                    }
+                    if (str.Contains('7'))
+                    {
+                        Class_up_dish.com = "CALL `ger_res_time_begin`(@p0, 7);";
+                    }
+                  
+
+                }
+                else if((comboBox2.SelectedItem == null || Convert.ToString(comboBox2.SelectedItem) == "По умолчанию") && str.Contains("До"))
+                {
+                    if (str.Contains('9'))
+                    {
+                        Class_up_dish.com = "CALL `get_res_tm_down`(@p0, 21);";
+                    }
+                    if (str.Contains("10"))
+                    {
+                        Class_up_dish.com = "CALL `get_res_tm_down`(@p0, 22);";
+                    }
+                    if (str.Contains("11"))
+                    {
+                        Class_up_dish.com = "CALL `get_res_tm_down`(@p0, 23);";
+                    }
+                    
+                }
                 PoYml(Class_up_dish.com);
             }
 
         }
 
+        public void conC(string str,string str2)
+        {
+            if (str.Contains('9'))
+            {
+                if (str2 == "Дорогой")
+                    Class_up_dish.com = "CALL `get_res_beg_dorog`(@p0, 9);";
+
+                else if (str2 == "Обычный")
+                    Class_up_dish.com = "CALL `get_res_beg_simp`(@p0, 9);";
+
+                else if (str2 == "Не дорогой")
+                    Class_up_dish.com = "CALL `get_res_beg_cheap`(@p0, 9);";
+
+                else
+                    Class_up_dish.com = "CALL `ger_res_time_begin`(@p0, 9);";
+
+            }
+
+            else if (str.Contains('8'))
+            {
+                if (str2 == "Дорогой")
+                    Class_up_dish.com = "CALL `get_res_beg_dorog`(@p0, 8);";
+
+                else if (str2 == "Обычный")
+                    Class_up_dish.com = "CALL `get_res_beg_simp`(@p0, 8);";
+
+                else if (str2 == "Не дорогой")
+                    Class_up_dish.com = "CALL `get_res_beg_cheap`(@p0, 8);";
+
+
+                else
+                    Class_up_dish.com = "CALL `ger_res_time_begin`(@p0, 8);";
+            }
+
+            else if (str.Contains('7'))
+            {
+                if (str2 == "Дорогой")
+                    Class_up_dish.com = "CALL `get_res_beg_dorog`(@p0, 7);";
+
+                else if (str2 == "Обычный")
+                    Class_up_dish.com = "CALL `get_res_beg_simp`(@p0, 7);";
+
+                else if (str2 == "Не дорогой")
+                    Class_up_dish.com = "CALL `get_res_beg_cheap`(@p0, 7);";
+
+                else
+                    Class_up_dish.com = "CALL `ger_res_time_begin`(@p0, 7);";
+            }
+        }
+
+        public void conDO(string str, string str2)
+        {
+            if (str.Contains('9'))
+            {
+                if (str2 == "Дорогой")
+                    Class_up_dish.com = "CALL `get_res_dorog_down`(@p0, 21);";
+
+                else if (str2 == "Обычный")
+                    Class_up_dish.com = "CALL `get_res_simp_down`(@p0, 21);";
+
+                else if (str2 == "Не дорогой")
+                    Class_up_dish.com = "CALL `get_res_cheap_down`(@p0, 21);";
+
+                else
+                    Class_up_dish.com = "CALL `get_res_tm_down`(@p0, 21);";
+
+            }
+
+            else if (str.Contains("10"))
+            {
+                if (str2 == "Дорогой")
+                    Class_up_dish.com = "CALL `get_res_dorog_down`(@p0, 22);";
+
+                else if (str2 == "Обычный")
+                    Class_up_dish.com = "CALL `get_res_simp_down`(@p0, 22);";
+
+                else if (str2 == "Не дорогой")
+                    Class_up_dish.com = "CALL `get_res_cheap_down`(@p0, 22);";
+
+
+                else
+                    Class_up_dish.com = "CALL `get_res_tm_down`(@p0, 22);";
+            }
+
+            else if (str.Contains("11"))
+            {
+                if (str2 == "Дорогой")
+                    Class_up_dish.com = "CALL `get_res_dorog_down`(@p0, 23);";
+
+                else if (str2 == "Обычный")
+                    Class_up_dish.com = "CALL `get_res_simp_down`(@p0, 23);";
+
+                else if (str2 == "Не дорогой")
+                    Class_up_dish.com = "CALL `get_res_cheap_down`(@p0, 23);";
+
+                else
+                    Class_up_dish.com = "CALL `get_res_tm_down`(@p0, 23);";
+            }
+        }
+        public void Ifcon(string str,string str2)
+        {
+            //comboBox2.Items.Add("Дорогой");
+            //comboBox2.Items.Add("Обычный");
+            //comboBox2.Items.Add("Не дорогой");
+            if (str.Contains("С"))
+            {
+                conC(str, str2);
+            }
+            else if (str.Contains("До"))
+            {
+                conDO(str, str2);
+            }
+            PoYml(Class_up_dish.com);
+        }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string str, str2;
+            if (comboBox2.SelectedItem == null)
+            {
+                str = comboBox1.SelectedItem.ToString(); str2 = "";
+            }
+            else
+            {
+                str = comboBox1.SelectedItem.ToString(); str2 = comboBox2.SelectedItem.ToString();
+            }
+               
 
+            if ((comboBox2.SelectedItem == null || Convert.ToString(comboBox2.SelectedItem) == "По умолчанию") && (comboBox1.SelectedItem == null || Convert.ToString(comboBox1.SelectedItem) == "По умолчанию"))
+            {
+                Class_up_dish.com = "CALL `get_rest`(@p0);";
+                PoYml(Class_up_dish.com);
+            }
+            else if((comboBox1.SelectedItem != null || Convert.ToString(comboBox1.SelectedItem) != "По умолчанию")&& (comboBox2.SelectedItem == null || Convert.ToString(comboBox2.SelectedItem) == "По умолчанию"))
+            {
+                
+                Ifcon(str,str2);
+            }
+            else if ((comboBox1.SelectedItem != null || Convert.ToString(comboBox1.SelectedItem) != "По умолчанию") && (comboBox2.SelectedItem != null || Convert.ToString(comboBox2.SelectedItem) != "По умолчанию"))
+            {
+                Ifcon(str,str2);
+            }
+             if(Convert.ToString(comboBox2.SelectedItem) == "Дорогой" && (comboBox1.SelectedItem == null || Convert.ToString(comboBox1.SelectedItem) == "По умолчанию"))
+            {
+                Class_up_dish.com = "CALL `get_res_dorog`(@p0);";
+                PoYml(Class_up_dish.com);
+            }
+             if (Convert.ToString(comboBox2.SelectedItem) == "Обычный" && (comboBox1.SelectedItem == null || Convert.ToString(comboBox1.SelectedItem) == "По умолчанию"))
+            {
+                Class_up_dish.com = "CALL `get_res_simple`(@p0);";
+                PoYml(Class_up_dish.com);
+            }
+             if (Convert.ToString(comboBox2.SelectedItem) == "Не дорогой" && (comboBox1.SelectedItem == null || Convert.ToString(comboBox1.SelectedItem) == "По умолчанию"))
+            {
+                Class_up_dish.com = "CALL `get_res_cheap`(@p0);";
+                PoYml(Class_up_dish.com);
+            }
+        }
+
+        private void but0_Click(object sender, EventArgs e)
+        {
+            Class_up_dish.id_res = table[0, 0].Value.ToString();
+
+            Cart_res form = new Cart_res();
+            form.Show();
+            form.Load1();
+            
+        }
+
+        private void but1_Click(object sender, EventArgs e)
+        {
+            Class_up_dish.id_res = table[0, 1].Value.ToString();
+
+            Cart_res form = new Cart_res();
+            form.Show();
+            form.Load1();
+        }
+
+        private void but2_Click(object sender, EventArgs e)
+        {
+            Class_up_dish.id_res = table[0, 2].Value.ToString();
+
+            Cart_res form = new Cart_res();
+            form.Show();
+            form.Load1();
+        }
+
+        private void but3_Click(object sender, EventArgs e)
+        {
+            Class_up_dish.id_res = table[0, 3].Value.ToString();
+
+            Cart_res form = new Cart_res();
+            form.Show();
+            form.Load1();
+        }
+
+        private void but4_Click(object sender, EventArgs e)
+        {
+            Class_up_dish.id_res = table[0, 4].Value.ToString();
+
+            Cart_res form = new Cart_res();
+            form.Show();
+            form.Load1();
+        }
+
+        private void but5_Click(object sender, EventArgs e)
+        {
+            Class_up_dish.id_res = table[0, 5].Value.ToString();
+
+            Cart_res form = new Cart_res();
+            form.Show();
+            form.Load1();
+        }
+
+        private void but6_Click(object sender, EventArgs e)
+        {
+            Class_up_dish.id_res = table[0, 6].Value.ToString();
+
+            Cart_res form = new Cart_res();
+            form.Show();
+            form.Load1();
+        }
+
+        private void but7_Click(object sender, EventArgs e)
+        {
+            Class_up_dish.id_res = table[0, 7].Value.ToString();
+
+            Cart_res form = new Cart_res();
+            form.Show();
+            form.Load1();
+        }
+
+        private void but8_Click(object sender, EventArgs e)
+        {
+            Class_up_dish.id_res = table[0, 8].Value.ToString();
+
+            Cart_res form = new Cart_res();
+            form.Show();
+            form.Load1();
+        }
+
+        private void but9_Click(object sender, EventArgs e)
+        {
+            Class_up_dish.id_res = table[0, 9].Value.ToString();
+
+            Cart_res form = new Cart_res();
+            form.Show();
+            form.Load1();
         }
     }
 }

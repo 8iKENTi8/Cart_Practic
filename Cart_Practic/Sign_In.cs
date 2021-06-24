@@ -20,6 +20,7 @@ namespace Cart_Practic
             
 
         }
+        DataTable table;
 
         private void label8_Click(object sender, EventArgs e)
         {
@@ -31,7 +32,7 @@ namespace Cart_Practic
         {
             DB dB = new DB();
 
-            DataTable table = new DataTable();
+             table = new DataTable();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
@@ -152,8 +153,11 @@ namespace Cart_Practic
             {
                 MessageBox.Show("Вы вошли как user");
                 this.Hide();
-                User_Form form = new User_Form();
-                form.Show();
+                Class_up_dish.id1 = table.Rows[0][1].ToString();
+                Class_up_dish.id2 = table.Rows[0][3].ToString();
+                Class_up_dish.form.ShowDialog();
+                //User_Form form = new User_Form();
+                //form.Show();
                 return;
             }
             else

@@ -64,7 +64,7 @@ namespace Cart_Practic
             table.DataSource = tab1;
 
             label11.Text = table[0, 0].Value.ToString();
-            int count1 = table.Columns.Count - 1;
+            int count1 = table.Rows.Count - 1;
 
             if(count1==1)
                 for (int i = 0; i < count1; i++)
@@ -74,10 +74,11 @@ namespace Cart_Practic
             else
                 for (int i = 0; i < count1; i++)
                 {
-                    label12.Text = table[1, i].Value.ToString()+", ";
+                    if (i == count1 - 1)
+                        label12.Text += table[1, i].Value.ToString();
+                    else
+                        label12.Text += table[1, i].Value.ToString() + ", ";
                 }
-
-
 
         }
 
@@ -86,9 +87,19 @@ namespace Cart_Practic
             this.Close();
         }
 
+        private void Cart_dish_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void label15_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Вы уверены что хотите закрыть приложение",
+                            "Закрытие приложения", MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

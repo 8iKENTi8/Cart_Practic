@@ -56,6 +56,7 @@ namespace Cart_Practic
             this.Sostav = new System.Windows.Forms.TextBox();
             this.add_ingr = new System.Windows.Forms.Button();
             this.drop_ingr = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,7 +68,7 @@ namespace Cart_Practic
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(639, 240);
+            this.button2.Location = new System.Drawing.Point(639, 277);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(229, 29);
             this.button2.TabIndex = 42;
@@ -81,23 +82,23 @@ namespace Cart_Practic
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(639, 275);
+            this.button1.Location = new System.Drawing.Point(639, 19);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(229, 29);
             this.button1.TabIndex = 41;
-            this.button1.Text = "Изменить";
+            this.button1.Text = "Сохранить изменения";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.Location = new System.Drawing.Point(334, 152);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(115, 21);
+            this.label8.Size = new System.Drawing.Size(137, 20);
             this.label8.TabIndex = 39;
-            this.label8.Text = "Ингридиенты";
+            this.label8.Text = "Все ингридиенты";
             // 
             // label7
             // 
@@ -262,7 +263,7 @@ namespace Cart_Practic
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(639, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(639, 66);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(229, 156);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -271,7 +272,7 @@ namespace Cart_Practic
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(639, 204);
+            this.textBox5.Location = new System.Drawing.Point(639, 249);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(229, 20);
             this.textBox5.TabIndex = 43;
@@ -280,7 +281,7 @@ namespace Cart_Practic
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(635, 180);
+            this.label9.Location = new System.Drawing.Point(635, 225);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(72, 21);
             this.label9.TabIndex = 44;
@@ -322,10 +323,21 @@ namespace Cart_Practic
             this.drop_ingr.UseVisualStyleBackColor = false;
             this.drop_ingr.Click += new System.EventHandler(this.drop_ingr_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(697, 309);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(115, 21);
+            this.label10.TabIndex = 48;
+            this.label10.Text = "Ингридиенты";
+            // 
             // up_dish
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.drop_ingr);
             this.Controls.Add(this.add_ingr);
             this.Controls.Add(this.Sostav);
@@ -389,5 +401,6 @@ namespace Cart_Practic
         private System.Windows.Forms.TextBox Sostav;
         private System.Windows.Forms.Button add_ingr;
         private System.Windows.Forms.Button drop_ingr;
+        private System.Windows.Forms.Label label10;
     }
 }

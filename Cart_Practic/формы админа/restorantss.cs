@@ -23,7 +23,12 @@ namespace Cart_Practic
 
         private void label8_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Вы уверены что хотите закрыть приложение",
+                           "Закрытие приложения", MessageBoxButtons.YesNo,
+                           MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void ReloadDB()

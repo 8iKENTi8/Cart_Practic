@@ -29,7 +29,7 @@ namespace Cart_Practic
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.but3 = new System.Windows.Forms.Button();
             this.img3 = new System.Windows.Forms.PictureBox();
             this.name3 = new System.Windows.Forms.Label();
@@ -145,8 +145,9 @@ namespace Cart_Practic
             this.but3.Name = "but3";
             this.but3.Size = new System.Drawing.Size(181, 34);
             this.but3.TabIndex = 1;
-            this.but3.Text = "Read More";
+            this.but3.Text = "Подробнее";
             this.but3.UseVisualStyleBackColor = false;
+            this.but3.Click += new System.EventHandler(this.but3_Click);
             // 
             // img3
             // 
@@ -219,8 +220,9 @@ namespace Cart_Practic
             this.but8.Name = "but8";
             this.but8.Size = new System.Drawing.Size(184, 34);
             this.but8.TabIndex = 1;
-            this.but8.Text = "Read More";
+            this.but8.Text = "Подробнее";
             this.but8.UseVisualStyleBackColor = false;
+            this.but8.Click += new System.EventHandler(this.but8_Click);
             // 
             // img8
             // 
@@ -250,8 +252,9 @@ namespace Cart_Practic
             this.but5.Name = "but5";
             this.but5.Size = new System.Drawing.Size(184, 34);
             this.but5.TabIndex = 1;
-            this.but5.Text = "Read More";
+            this.but5.Text = "Подробнее";
             this.but5.UseVisualStyleBackColor = false;
+            this.but5.Click += new System.EventHandler(this.but5_Click);
             // 
             // pictureBox1
             // 
@@ -312,8 +315,8 @@ namespace Cart_Practic
             // table
             // 
             this.table.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.table.BackgroundColor = System.Drawing.Color.White;
             this.table.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -383,8 +386,9 @@ namespace Cart_Practic
             this.but4.Name = "but4";
             this.but4.Size = new System.Drawing.Size(180, 34);
             this.but4.TabIndex = 1;
-            this.but4.Text = "Read More";
+            this.but4.Text = "Подробнее";
             this.but4.UseVisualStyleBackColor = false;
+            this.but4.Click += new System.EventHandler(this.but4_Click);
             // 
             // img4
             // 
@@ -559,8 +563,9 @@ namespace Cart_Practic
             this.but2.Name = "but2";
             this.but2.Size = new System.Drawing.Size(184, 34);
             this.but2.TabIndex = 1;
-            this.but2.Text = "Read More";
+            this.but2.Text = "Подробнее";
             this.but2.UseVisualStyleBackColor = false;
+            this.but2.Click += new System.EventHandler(this.but2_Click);
             // 
             // img2
             // 
@@ -613,8 +618,9 @@ namespace Cart_Practic
             this.but1.Name = "but1";
             this.but1.Size = new System.Drawing.Size(182, 34);
             this.but1.TabIndex = 1;
-            this.but1.Text = "Read More";
+            this.but1.Text = "Подробнее";
             this.but1.UseVisualStyleBackColor = false;
+            this.but1.Click += new System.EventHandler(this.but1_Click);
             // 
             // tm1
             // 
@@ -693,8 +699,9 @@ namespace Cart_Practic
             this.but0.Name = "but0";
             this.but0.Size = new System.Drawing.Size(184, 34);
             this.but0.TabIndex = 1;
-            this.but0.Text = "Read More";
+            this.but0.Text = "Подробнее";
             this.but0.UseVisualStyleBackColor = false;
+            this.but0.Click += new System.EventHandler(this.but0_Click);
             // 
             // name0
             // 
@@ -841,8 +848,9 @@ namespace Cart_Practic
             this.but6.Name = "but6";
             this.but6.Size = new System.Drawing.Size(182, 34);
             this.but6.TabIndex = 1;
-            this.but6.Text = "Read More";
+            this.but6.Text = "Подробнее";
             this.but6.UseVisualStyleBackColor = false;
+            this.but6.Click += new System.EventHandler(this.but6_Click);
             // 
             // tb6
             // 
@@ -892,8 +900,9 @@ namespace Cart_Practic
             this.but7.Name = "but7";
             this.but7.Size = new System.Drawing.Size(184, 34);
             this.but7.TabIndex = 1;
-            this.but7.Text = "Read More";
+            this.but7.Text = "Подробнее";
             this.but7.UseVisualStyleBackColor = false;
+            this.but7.Click += new System.EventHandler(this.but7_Click);
             // 
             // panel4
             // 
@@ -975,8 +984,9 @@ namespace Cart_Practic
             this.but9.Name = "but9";
             this.but9.Size = new System.Drawing.Size(180, 34);
             this.but9.TabIndex = 1;
-            this.but9.Text = "Read More";
+            this.but9.Text = "Подробнее";
             this.but9.UseVisualStyleBackColor = false;
+            this.but9.Click += new System.EventHandler(this.but9_Click);
             // 
             // panel9
             // 

@@ -137,7 +137,7 @@ namespace Cart_Practic
                 if (Class_up_dish.tm[i] == Class_up_dish.tm1[i])
                 {
                     list_tm[i].Text = "";
-                    btn_tm[i].Text = "";
+                    btn_tm[i].Visible = false;
                     Class_up_dish.tm[i] = Class_up_dish.tm1[i];
                 }
                 else
@@ -266,7 +266,16 @@ namespace Cart_Practic
             comboBox2.Text = "По умолчанию";
 
         }
-        private void dishes_Load(object sender, EventArgs e)
+
+        public void load2()
+        {
+            Class_up_dish.com = $"CALL `get_dish_menu`(@p0, {Class_up_dish.id_res});";
+            PoYml(Class_up_dish.com);
+            comboBox1.Text = "По умолчанию";
+            comboBox2.Text = "По умолчанию";
+        }
+
+            private void dishes_Load(object sender, EventArgs e)
         {
             load1();
 
