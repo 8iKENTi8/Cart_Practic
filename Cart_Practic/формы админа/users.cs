@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -58,7 +59,60 @@ namespace Cart_Practic.формы_админы
 
 
         }
+        
+        public bool Proverka(DataGridViewCellEventArgs e)
+        {
+            table[0, e.RowIndex].Style.BackColor = Color.White;
+            table[1, e.RowIndex].Style.BackColor = Color.White;
+            table[2, e.RowIndex].Style.BackColor = Color.White;
+            table[3, e.RowIndex].Style.BackColor = Color.White;
 
+
+            //Проверка пустое ли значение
+            if ((table.Rows[e.RowIndex].Cells[0].Value.ToString() == ""))// проверяем 1-й столбец на пустые ячейки
+            {
+                table[0, e.RowIndex].Style.BackColor = Color.Tomato; // заодно покрасим
+                MessageBox.Show("Не введен id");
+                return false;
+            }
+           else if (table.Rows[e.RowIndex].Cells[1].Value.ToString() == "")// проверяем 2-й столбец на пустые ячейки
+            {
+                table[1, e.RowIndex].Style.BackColor = Color.Tomato; // заодно покрасим
+                MessageBox.Show("Не введен логин");
+                return false;
+            }
+           else if (table.Rows[e.RowIndex].Cells[2].Value.ToString() == "")// проверяем 3-й столбец на пустые ячейки
+            {
+                table[2, e.RowIndex].Style.BackColor = Color.Tomato; // заодно покрасим
+                MessageBox.Show("Не введен маил");
+                return false;
+            }
+           else if (table.Rows[e.RowIndex].Cells[3].Value.ToString() == "")// проверяем 4-й столбец на пустые ячейки
+            {
+                table[3, e.RowIndex].Style.BackColor = Color.Tomato; // заодно покрасим
+                MessageBox.Show("Не введена роль");
+                return false;
+            }
+
+            //Проверка на корректность данных
+            string mail = table.Rows[e.RowIndex].Cells[2].Value.ToString();
+            string rol = table.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+            if (!mail.Contains("@") || !mail.Contains("."))
+            {
+                MessageBox.Show("Не корректный маил");
+                table[2, e.RowIndex].Style.BackColor = Color.Tomato; // заодно покрасим
+                return false;
+            }
+            else if (!(rol == "пользователь") && !(rol == "админ"))
+            {
+                MessageBox.Show("Не корректная роль");
+                table[3, e.RowIndex].Style.BackColor = Color.Tomato; // заодно покрасим
+                return false;
+            }
+
+            return true;
+        }
         private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -68,34 +122,37 @@ namespace Cart_Practic.формы_админы
                     string task = table.Rows[e.RowIndex].Cells[4].Value.ToString();
                     if (task == "Update")
                     {
-                        if (MessageBox.Show("Обновить эту строку",
+                        if (Proverka(e))
+                        {
+                            if (MessageBox.Show("Обновить эту строку",
                             "Обновление", MessageBoxButtons.YesNo,
                             MessageBoxIcon.Question) == DialogResult.Yes)
-                        {
-                            int rowIndex = e.RowIndex;
+                            {
+                                int rowIndex = e.RowIndex;
 
-                            DB db = new DB();
-                            MySqlCommand command = new MySqlCommand("UPDATE `users` SET `id` = @ul, `log` = @lg,  `email` = @em, `role_id` = @em1 WHERE `users`.`id` = @ul", db.getConnection());
+                                DB db = new DB();
+                                MySqlCommand command = new MySqlCommand("UPDATE `users` SET `id` = @ul, `log` = @lg,  `email` = @em, `role_id` = @em1 WHERE `users`.`id` = @ul", db.getConnection());
 
-                            command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
-                            command.Parameters.Add("@lg", MySqlDbType.VarChar).Value = table[1, rowIndex].Value.ToString();
-                            command.Parameters.Add("@em", MySqlDbType.VarChar).Value = table[2, rowIndex].Value.ToString();
+                                command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
+                                command.Parameters.Add("@lg", MySqlDbType.VarChar).Value = table[1, rowIndex].Value.ToString();
+                                command.Parameters.Add("@em", MySqlDbType.VarChar).Value = table[2, rowIndex].Value.ToString();
 
-                            string role = table[3, rowIndex].Value.ToString();
-
-                           
-
-                            if (Class_up_dish.roleId(role))
-                                command.Parameters.Add("@em1", MySqlDbType.VarChar).Value = 1;
-                            else
-                                command.Parameters.Add("@em1", MySqlDbType.VarChar).Value = 2;
+                                string role = table[3, rowIndex].Value.ToString();
 
 
 
-                            db.openConnection();
-                            if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Пользователь был обновлен"); }
+                                if (Class_up_dish.roleId(role))
+                                    command.Parameters.Add("@em1", MySqlDbType.VarChar).Value = 1;
+                                else
+                                    command.Parameters.Add("@em1", MySqlDbType.VarChar).Value = 2;
 
-                            db.closeConnection();
+
+
+                                db.openConnection();
+                                if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Пользователь был обновлен"); }
+
+                                db.closeConnection();
+                            }
                         }
                     }
                 }

@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -59,6 +60,39 @@ namespace Cart_Practic
 
         }
 
+        public bool Proverka(DataGridViewCellEventArgs e)
+        {
+            table[0, e.RowIndex].Style.BackColor = Color.White;
+            table[1, e.RowIndex].Style.BackColor = Color.White;
+
+            //Проверка пустое ли значение
+            if ((table.Rows[e.RowIndex].Cells[0].Value.ToString() == ""))// проверяем 1-й столбец на пустые ячейки
+            {
+                table[0, e.RowIndex].Style.BackColor = Color.Tomato; // заодно покрасим
+                MessageBox.Show("Не введен id");
+                return false;
+            }
+            else if (table.Rows[e.RowIndex].Cells[1].Value.ToString() == "")// проверяем 2-й столбец на пустые ячейки
+            {
+                table[1, e.RowIndex].Style.BackColor = Color.Tomato; // заодно покрасим
+                MessageBox.Show("Не введена категория");
+                return false;
+            }
+
+
+            //Проверка на корректность данных
+
+
+
+            if (Regex.Match(table.Rows[e.RowIndex].Cells[1].Value.ToString(), @"[0-9|[+]").Success)
+            {
+                MessageBox.Show("Может содержать только буквы");
+                return false;
+            }
+
+            return true;
+        }
+
         private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -68,23 +102,26 @@ namespace Cart_Practic
                     string task = table.Rows[e.RowIndex].Cells[2].Value.ToString();
                     if (task == "Update")
                     {
-                        if (MessageBox.Show("Обновить эту строку",
+                        if (Proverka(e))
+                        {
+                            if (MessageBox.Show("Обновить эту строку",
                             "Обновление", MessageBoxButtons.YesNo,
                             MessageBoxIcon.Question) == DialogResult.Yes)
-                        {
-                            int rowIndex = e.RowIndex;
+                            {
+                                int rowIndex = e.RowIndex;
 
-                            DB db = new DB();
-                            MySqlCommand command = new MySqlCommand("UPDATE `categories` SET " +
-                                "`name` = @lg WHERE `categories`.`category_id` = @ul", db.getConnection());
+                                DB db = new DB();
+                                MySqlCommand command = new MySqlCommand("UPDATE `categories` SET " +
+                                    "`name` = @lg WHERE `categories`.`category_id` = @ul", db.getConnection());
 
-                            command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
-                            command.Parameters.Add("@lg", MySqlDbType.VarChar).Value = table[1, rowIndex].Value.ToString();
+                                command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
+                                command.Parameters.Add("@lg", MySqlDbType.VarChar).Value = table[1, rowIndex].Value.ToString();
 
-                            db.openConnection();
-                            if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Запись была обновлена"); }
+                                db.openConnection();
+                                if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Запись была обновлена"); }
 
-                            db.closeConnection();
+                                db.closeConnection();
+                            }
                         }
                     }
                 }

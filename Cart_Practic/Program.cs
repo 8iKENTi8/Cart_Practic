@@ -17,7 +17,7 @@ namespace Cart_Practic
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Sign_In());
+            Application.Run(new Admin_Form());
         }
     }
 }

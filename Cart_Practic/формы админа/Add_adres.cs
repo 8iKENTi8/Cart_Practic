@@ -67,9 +67,6 @@ namespace Cart_Practic
             }
            
 
-
-
-
             //Добавление записи в бд
             DB dB = new DB();
 
@@ -92,6 +89,15 @@ namespace Cart_Practic
             dB.closeConnection();
 
             this.Hide();
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char l = e.KeyChar;
+            if ((l < 'А' || l > 'я') && l != '\b'&& l!='.')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

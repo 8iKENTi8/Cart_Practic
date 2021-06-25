@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,7 +20,7 @@ namespace Cart_Practic
         }
 
         DataTable tab;
-       
+
 
         private void ReloadDB()
         {
@@ -58,8 +59,53 @@ namespace Cart_Practic
                 table[4, i] = linkCell;
                 table[4, i].Style.BackColor = Color.Tomato;
             }
-
+        }
             
+        
+
+        public bool Proverka(DataGridViewCellEventArgs e)
+        {
+            table[0, e.RowIndex].Style.BackColor = Color.White;
+            table[1, e.RowIndex].Style.BackColor = Color.White;
+            table[2, e.RowIndex].Style.BackColor = Color.White;
+
+            //Проверка пустое ли значение
+            if ((table.Rows[e.RowIndex].Cells[0].Value.ToString() == ""))// проверяем 1-й столбец на пустые ячейки
+            {
+                table[0, e.RowIndex].Style.BackColor = Color.Tomato; // заодно покрасим
+                MessageBox.Show("Не введен id");
+                return false;
+            }
+            else if (table.Rows[e.RowIndex].Cells[1].Value.ToString() == "")// проверяем 2-й столбец на пустые ячейки
+            {
+                table[1, e.RowIndex].Style.BackColor = Color.Tomato; // заодно покрасим
+                MessageBox.Show("Не введено название");
+                return false;
+            }
+            else if (table.Rows[e.RowIndex].Cells[2].Value.ToString() == "")// проверяем 3-й столбец на пустые ячейки
+            {
+                table[2, e.RowIndex].Style.BackColor = Color.Tomato; // заодно покрасим
+                MessageBox.Show("Не введен адрес");
+                return false;
+            }
+
+
+            //Проверка на корректность данных
+
+            if (Regex.Match(table.Rows[e.RowIndex].Cells[1].Value.ToString(), @"[0-9|[+]").Success)
+            {
+                table[1, e.RowIndex].Style.BackColor = Color.Tomato; // заодно покрасим
+                MessageBox.Show("Может содержать только буквы");
+                return false;
+            }
+           else if (Regex.Match(table.Rows[e.RowIndex].Cells[2].Value.ToString(), @"[0-9|[+]").Success)
+            {
+                table[2, e.RowIndex].Style.BackColor = Color.Tomato; // заодно покрасим
+                MessageBox.Show("Может содержать только буквы");
+                return false;
+            }
+
+            return true;
         }
 
         private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -71,24 +117,27 @@ namespace Cart_Practic
                     string task = table.Rows[e.RowIndex].Cells[3].Value.ToString();
                     if (task == "Update")
                     {
-                        if (MessageBox.Show("Обновить эту строку",
+                        if (Proverka(e))
+                        {
+                            if (MessageBox.Show("Обновить эту строку",
                             "Обновление", MessageBoxButtons.YesNo,
                             MessageBoxIcon.Question) == DialogResult.Yes)
-                        {
-                            int rowIndex = e.RowIndex;
+                            {
+                                int rowIndex = e.RowIndex;
 
-                            DB db = new DB();
-                            MySqlCommand command = new MySqlCommand("UPDATE `restaurant_addresses` SET `place` = " +
-                                "@lg WHERE `restaurant_addresses`.`id_adres`=@ul  ", db.getConnection());
+                                DB db = new DB();
+                                MySqlCommand command = new MySqlCommand("UPDATE `restaurant_addresses` SET `place` = " +
+                                    "@lg WHERE `restaurant_addresses`.`id_adres`=@ul  ", db.getConnection());
 
-                            command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
-                            command.Parameters.Add("@lg", MySqlDbType.VarChar).Value = table[2, rowIndex].Value.ToString();
-                            
+                                command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
+                                command.Parameters.Add("@lg", MySqlDbType.VarChar).Value = table[2, rowIndex].Value.ToString();
 
-                            db.openConnection();
-                            if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Аккаунт был Обновлен"); }
 
-                            db.closeConnection();
+                                db.openConnection();
+                                if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Аккаунт был Обновлен"); }
+
+                                db.closeConnection();
+                            }
                         }
                     }
                 }

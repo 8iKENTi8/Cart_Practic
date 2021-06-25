@@ -361,5 +361,24 @@ namespace Cart_Practic
         {
             Class_up_dish.ingr1 = dataGridView1[0, e.RowIndex].Value.ToString();
         }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {      
+            char number = e.KeyChar;
+
+            if (!Char.IsDigit(number) && number != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char l = e.KeyChar;
+            if ((l < 'А' || l > 'я') && l != '\b')
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -44,9 +44,9 @@ namespace Cart_Practic
         private void button2_Click(object sender, EventArgs e)
         {
             string rol = comboBox1.Text,
-           log = textBox3.Text,
-           mail = textBox2.Text,
-           pas = textBox1.Text;
+           log = textBox3.Text.Trim(),
+           mail = textBox2.Text.ToLower().Trim(),
+           pas = textBox1.Text.Trim();
 
 
             // Проверка выбран ли комбобокс
@@ -82,7 +82,11 @@ namespace Cart_Practic
             }
 
 
-
+            if (mail.Length < 5 || !mail.Contains("@") || !mail.Contains("."))
+            {
+                MessageBox.Show("Некоректный email");
+                return;
+            }
 
 
             //Добавление записи в бд
@@ -110,5 +114,7 @@ namespace Cart_Practic
 
             this.Hide();
         }
+
+      
     }
 }

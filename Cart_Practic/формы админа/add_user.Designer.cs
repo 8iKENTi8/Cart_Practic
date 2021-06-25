@@ -140,6 +140,7 @@ namespace Cart_Practic
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(356, 20);
             this.textBox3.TabIndex = 20;
+            
             // 
             // label4
             // 
