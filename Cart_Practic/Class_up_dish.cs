@@ -8,7 +8,7 @@ namespace Cart_Practic
 {
     class Class_up_dish
     {
-       static public string id,id_cat,id_res,id_ingr,ingr,ingr1,com,com1,id1,id2;
+       static public string id,id_cat,id_res,id_ingr,ingr,ingr1,com,com1,id1,id2,nameres;
 
       static public  User_Form form = new User_Form();
       

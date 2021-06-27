@@ -21,6 +21,9 @@ namespace Cart_Practic
             comboBox1.Items.Add("По умолчанию");
             comboBox1.Items.Add("По возрастанию");
             comboBox1.Items.Add("По Убыванию");
+            label2.Visible = false;
+            label3.Visible = false;
+            button2.Visible = false;
           
 
             comboBox2.Text = "По умолчанию";
@@ -273,6 +276,14 @@ namespace Cart_Practic
             PoYml(Class_up_dish.com);
             comboBox1.Text = "По умолчанию";
             comboBox2.Text = "По умолчанию";
+            label2.Visible = true;
+            label3.Visible = true;
+            button2.Visible = true;
+            comboBox1.Visible = false;
+            comboBox2.Visible = false;
+            label1.Visible = false;
+            filtcost.Visible = false;
+            label3.Text = Class_up_dish.nameres;
         }
 
             private void dishes_Load(object sender, EventArgs e)
@@ -411,12 +422,8 @@ namespace Cart_Practic
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-             if (Convert.ToString(comboBox1.SelectedItem) == "По умолчанию" && comboBox2.SelectedItem == null)
-            {
-                Class_up_dish.com = "CALL `get_dish`(@p0);";
-                PoYml(Class_up_dish.com);
-            }
-           else if (Convert.ToString( comboBox1.SelectedItem )== "По умолчанию" && Convert.ToString(comboBox2.SelectedItem) == "По умолчанию")
+           
+            if (Convert.ToString( comboBox1.SelectedItem )== "По умолчанию" && (Convert.ToString(comboBox2.SelectedItem) == "По умолчанию"|| comboBox2.SelectedItem == null))
             {
                 Class_up_dish.com = "CALL `get_dish`(@p0);";
                 PoYml(Class_up_dish.com);
@@ -655,6 +662,20 @@ namespace Cart_Practic
             Cart_dish form = new Cart_dish();
             form.Show();
             form.Load1();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Class_up_dish.com = "CALL `get_dish`(@p0); ";
+            PoYml(Class_up_dish.com);
+            label2.Visible = false;
+            label3.Visible = false;
+            button2.Visible = false;
+            comboBox1.Visible = true;
+            comboBox2.Visible = true;
+            label1.Visible = true;
+            filtcost.Visible = true;
+            label3.Visible = false;
         }
     }
 }

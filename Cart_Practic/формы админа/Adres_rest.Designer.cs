@@ -62,7 +62,7 @@ namespace Cart_Practic
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(771, 291);
             this.panel2.TabIndex = 4;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+           
             // 
             // button1
             // 
@@ -112,7 +112,7 @@ namespace Cart_Practic
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(148, 20);
             this.txtSearch.TabIndex = 2;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            
             this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
             // table
@@ -146,7 +146,7 @@ namespace Cart_Practic
             this.label1.Size = new System.Drawing.Size(206, 22);
             this.label1.TabIndex = 5;
             this.label1.Text = "Адреса ресторанов";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+           
             // 
             // label8
             // 
@@ -169,7 +169,7 @@ namespace Cart_Practic
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            
             // 
             // Adres_rest
             // 

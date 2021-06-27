@@ -47,6 +47,7 @@ namespace Cart_Practic
             table.DataSource = tab;
 
            name.Text= table[1, 0].Value.ToString();
+            Class_up_dish.nameres= table[1, 0].Value.ToString(); 
             avch.Text="Средний чек: "+ table[2, 0].Value.ToString();
             time.Text= table[3, 0].Value.ToString()+"-"+ table[4, 0].Value.ToString(); 
             desc.Text= table[5, 0].Value.ToString();

@@ -87,6 +87,7 @@ namespace Cart_Practic
             if (Regex.Match(table.Rows[e.RowIndex].Cells[1].Value.ToString(), @"[0-9|[+]").Success)
             {
                 MessageBox.Show("Может содержать только буквы");
+                table[1, e.RowIndex].Style.BackColor = Color.Tomato; // заодно покрасим
                 return false;
             }
 
@@ -154,7 +155,7 @@ namespace Cart_Practic
                             table.Rows.RemoveAt(rowIndex);
 
                             db.openConnection();
-                            if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Аккаунт был Удален"); }
+                            if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Запись была удалена"); }
 
                             db.closeConnection();
                         }

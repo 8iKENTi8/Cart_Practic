@@ -61,8 +61,6 @@ namespace Cart_Practic
             }
         }
             
-        
-
         public bool Proverka(DataGridViewCellEventArgs e)
         {
             table[0, e.RowIndex].Style.BackColor = Color.White;
@@ -216,7 +214,7 @@ namespace Cart_Practic
             }
         }
 
-        // Поиск
+        //Поиск
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13)
@@ -248,8 +246,8 @@ namespace Cart_Practic
                 {
                     DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
 
-                    table[3, i] = linkCell;
-                    table[3, i].Style.BackColor = Color.FromArgb(46, 169, 79);
+                    table[4, i] = linkCell;
+                    table[4, i].Style.BackColor = Color.FromArgb(46, 169, 79);
                 }
 
                 for (int i = 0; i < table.Rows.Count; i++)
@@ -267,24 +265,6 @@ namespace Cart_Practic
             new Add_adres().ShowDialog();
         }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

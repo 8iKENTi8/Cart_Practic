@@ -112,17 +112,14 @@ namespace Cart_Practic
                                 int rowIndex = e.RowIndex;
 
                                 DB db = new DB();
-                                MySqlCommand command = new MySqlCommand("UPDATE `ingredients` SET `id` = @ul, " +
-                                    "`login` = @lg, `pass` = @ps, " +
-                                    "`email` = @em WHERE `users`.`id` = @ul", db.getConnection());
+                                MySqlCommand command = new MySqlCommand("UPDATE `ingredients` SET `ingredient_id` = @ul, `name` = @lg WHERE `ingredients`.`ingredient_id` = @ul", db.getConnection());
 
                                 command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
                                 command.Parameters.Add("@lg", MySqlDbType.VarChar).Value = table[1, rowIndex].Value.ToString();
-                                command.Parameters.Add("@ps", MySqlDbType.VarChar).Value = table[2, rowIndex].Value.ToString();
-                                command.Parameters.Add("@em", MySqlDbType.VarChar).Value = table[3, rowIndex].Value.ToString();
+                                
 
                                 db.openConnection();
-                                if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Аккаунт был Обновлен"); }
+                                if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Запись была обновлена"); }
 
                                 db.closeConnection();
                             }
@@ -152,13 +149,13 @@ namespace Cart_Practic
 
                             DB db = new DB();
                             MySqlCommand command = new MySqlCommand("DELETE FROM `ingredients`" +
-                                " WHERE `users`.`id` = @ul ", db.getConnection());
+                                " WHERE `ingredients`.`ingredient_id` = @ul ", db.getConnection());
                             command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = table[0, rowIndex].Value.ToString();
 
                             table.Rows.RemoveAt(rowIndex);
 
                             db.openConnection();
-                            if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Аккаунт был Удален"); }
+                            if (command.ExecuteNonQuery() == 1) { MessageBox.Show("Запись была удалена"); }
 
                             db.closeConnection();
                         }
