@@ -32,8 +32,8 @@ namespace Cart_Practic
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
             MySqlCommand command =
-                new MySqlCommand("SELECT *, 'Update','Delete'" +
-                "FROM `ingredients`", dB.getConnection());
+                new MySqlCommand("SELECT `ingredient_id` AS 'Id',`name` AS 'Название'," +
+                " 'Update','Delete'" + "FROM `ingredients`", dB.getConnection());
 
             adapter.SelectCommand = command;
 
@@ -251,7 +251,7 @@ namespace Cart_Practic
             if (e.KeyChar == (char)13)
             {
                 DataView data = tab.DefaultView;
-                data.RowFilter = string.Format("name like '%{0}%'", txtSearch.Text);
+                data.RowFilter = string.Format("Название like '%{0}%'", txtSearch.Text);
                 table.DataSource = data.ToTable();
 
                 for (int i = 0; i < table.Rows.Count; i++)

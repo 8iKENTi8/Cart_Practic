@@ -558,7 +558,8 @@ namespace Cart_Practic
             {
                 if (txtSearch.Text != "")
                 {
-                    Class_up_dish.com1 = $"CALL `get_dish_search`(@p0, '{txtSearch.Text}');";
+                    string srt2 = "%" + txtSearch.Text + "%";
+                    Class_up_dish.com1 = $"CALL `get_dish_search`(@p0, '{srt2}');";
 
                     PoYml(Class_up_dish.com1);
                 }
